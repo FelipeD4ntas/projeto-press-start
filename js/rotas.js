@@ -20,9 +20,6 @@ async function rotas(){
     case '#telaAddClientes':
       return { telaAddClientes: await telaAddClientes() }
       break
-    case '#telaAddClientes':
-      return { telaAddClientes: await telaAddClientes() }
-      break
     case '#telaAddVendas':
       return { telaAddVendas: await telaAddVendas() }
       break
