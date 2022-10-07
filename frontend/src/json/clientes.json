@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "nome": "Marcos Felipe",
+    "email": "marcos.c@lyncas.net",
+    "telefone": "(62) 99999-9999",
+    "cpf": "000.000.000-00",
+    "inativo": false,
+    "vendas": [
+      {
+      "idVenda": 1,
+      "idCliente": 1,
+      "descricaoProduto": "Produto 1",
+      "qtd": "1",
+      "dataVenda": "14/05/2022",
+      "precoUnitario": "R$ 90,00",
+      "dataFaturamento": "14/05/2022",
+      "valorTotal": "R$ 90,00"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nome": "Adonai Soares",
+    "email": "adonai.s@lyncas.net",
+    "telefone": "(62) 99999-9999",
+    "cpf": "000.000.000-00",
+    "inativo": false,
+    "vendas": [
+      {
+      "idVenda": 1,
+      "idCliente": 2,
+      "descricaoProduto": "Produto 1",
+      "qtd": "1",
+      "dataVenda": "18/05/2021",
+      "precoUnitario": "R$70,00",
+      "dataFaturamento": "18/05/2022",
+      "valorTotal": "R$ 70,00"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "nome": "Daniel Caldas",
+    "email": "daniel.c@lyncas.net",
+    "telefone": "(62) 99999-9999",
+    "cpf": "000.000.000-00",
+    "inativo": false,
+    "vendas": [
+      {
+      "idVenda": 1,
+      "idCliente": 3,
+      "descricaoProduto": "Produto 1",
+      "qtd": "1",
+      "dataVenda": "11/07/2022",
+      "precoUnitario": "R$ 90,00",
+      "dataFaturamento": "11/07/2022",
+      "valorTotal": "R$ 90,00"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "nome": "Elenilson Silva",
+    "email": "elenilson.s@lyncas.net",
+    "telefone": "(62) 99999-9999",
+    "cpf": "000.000.000-00",
+    "inativo": false,
+    "vendas": [
+      {
+      "idVenda": 1,
+      "idCliente": 4,
+      "descricaoProduto": "Produto 1",
+      "qtd": "1",
+      "dataVenda": "23/08/2022",
+      "precoUnitario": "R$ 10,00",
+      "dataFaturamento": "23/08/2022",
+      "valorTotal": "R$ 10,00"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "nome": "Gabriel Pugas",
+    "email": "gabriel.p@lyncas.net",
+    "telefone": "(62) 99999-9999",
+    "cpf": "000.000.000-00",
+    "inativo": false,
+    "vendas": [
+      {
+      "idVenda": 1,
+      "idCliente": 5,
+      "descricaoProduto": "Produto 1",
+      "qtd": "1",
+      "dataVenda": "01/02/2022",
+      "precoUnitario": "R$ 95,00",
+      "dataFaturamento": "01/02/2022",
+      "valorTotal": "R$ 95,00"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "nome": "Katia Andrade",
+    "email": "katia.a@lyncas.net",
+    "telefone": "(62) 99999-9999",
+    "cpf": "000.000.000-00",
+    "inativo": false,
+    "vendas": [
+      {
+      "idVenda": 1,
+      "idCliente": 6,
+      "descricaoProduto": "Produto 1",
+      "qtd": "1",
+      "dataVenda": "27/08/2022",
+      "precoUnitario": "R$ 50,00",
+      "dataFaturamento": "27/08/2022",
+      "valorTotal": "R$ 50,00"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "nome": "Lucas Brito",
+    "email": "lucas.b@lyncas.net",
+    "telefone": "(62) 99999-9999",
+    "cpf": "000.000.000-00",
+    "inativo": false,
+    "vendas": [
+      {
+      "idVenda": 1,
+      "idCliente": 7,
+      "descricaoProduto": "Produto 1",
+      "qtd": "1",
+      "dataVenda": "22/11/2021",
+      "precoUnitario": "R$ 56,00",
+      "dataFaturamento": "22/11/2021",
+      "valorTotal": "R$ 56,00"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "nome": "Lazaro Vanderson",
+    "email": "lazaro.v@lyncas.net",
+    "telefone": "(62) 99999-9999",
+    "cpf": "000.000.000-00",
+    "inativo": false,
+    "vendas": [
+      {
+      "idVenda": 1,
+      "idCliente": 8,
+      "descricaoProduto": "Produto 1",
+      "qtd": "1",
+      "dataVenda": "10/10/2021",
+      "precoUnitario": "R$ 84,00",
+      "dataFaturamento": "10/10/2021",
+      "valorTotal": "R$ 84,00"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "nome": "Caio Porto",
+    "email": "caio.p@lyncas.net",
+    "telefone": "(62) 99999-9999",
+    "cpf": "000.000.000-00",
+    "inativo": false,
+    "vendas": [
+      {
+      "idVenda": 1,
+      "idCliente": 9,
+      "descricaoProduto": "Produto 1",
+      "qtd": "1",
+      "dataVenda": "07/05/2022",
+      "precoUnitario": "R$ 33,00",
+      "dataFaturamento": "07/05/2022",
+      "valorTotal": "R$ 33,00"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "nome": "Victor Souza",
+    "email": "victor.s@lyncas.net",
+    "telefone": "(62) 99999-9999",
+    "cpf": "000.000.000-00",
+    "inativo": false,
+    "vendas": [
+      {
+      "idVenda": 1,
+      "idCliente": 10,
+      "descricaoProduto": "Produto 1",
+      "qtd": "1",
+      "dataVenda": "19/07/2022",
+      "precoUnitario": "R$ 54,00",
+      "dataFaturamento": "19/07/2022",
+      "valorTotal": "R$ 54,00"
+      }
+    ]
+  }
+]
