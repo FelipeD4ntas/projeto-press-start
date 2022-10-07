@@ -1,8 +1,8 @@
 import dashboard from '../pages/dashboard/dashboard.js';
 import clientes from '../pages/clientes/clientes.js';
 import vendas from '../pages/vendas/vendas.js';
-import telaAddClientes from '../pages/clientes/telaAddClientes.js';
 import telaAddVendas from '../pages/vendas/telaAddVendas.js';
+import telaAddClientes from '../pages/clientes/telaAddClientes.js';
 
 async function rotas(){
   const hashPaginaAtual = window.location.hash;
