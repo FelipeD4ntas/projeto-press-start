@@ -7,7 +7,7 @@ async function addItemLocalStorage(bancoLocalStorage) {
 }
 
 async function buscarItensBD() {
-  const resposta = await fetch('../json/clientes.json');
+  const resposta = await fetch('./json/clientes.json');
   
   return await resposta.json();
 }
