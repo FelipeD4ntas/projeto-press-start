@@ -6,12 +6,12 @@ Na primeira etapa foi desenvolvido o dashboard da página de Boas-vindas incluin
 ## Telas primeira etapa
 * ##### Dashboard Boas-vindas
 
-![image](https://gitlab.com/press-start-2/projeto-marcos/uploads/8b95f97b858fc0704030680072576c17/telaDashboard.png)
+![telaDashboard](https://user-images.githubusercontent.com/85248692/213281490-ab855841-08d5-483a-b966-d9abd7be82d9.png)
 
 
 * ##### Dashboard Boas-vindas (Responsivo)
 
-![image](https://gitlab.com/press-start-2/projeto-marcos/uploads/57b6090b4bef040b9b44ae573e2fe077/telaDashboardResponsivo.png)
+![telaDashboardResponsivo](https://user-images.githubusercontent.com/85248692/213282021-66c065c7-047a-48d2-8050-45b30b8c9063.png)
 
 ## Segunda etapa
 Na segunda etapa foi desenvolvido as páginas de listagem e cadastro de clientes.<br> 
@@ -20,40 +20,40 @@ Implementado as funções de deletar, editar e buscar clientes, e também as val
 ## Telas segunda etapa
 * ##### Lista Clientes
 
-![telaListaClientes](/uploads/d5fa3ba75662021c6d5f68bbfacf5d42/telaListaClientes.png)
-![popupDeletarRegistro](/uploads/02da7bce569f4a7dbd515d0e6d94422d/popupDeletarRegistro.png)
+![telaListaClientes](https://user-images.githubusercontent.com/85248692/213282069-e35eab6f-f7ec-4826-905b-7016e6187ce8.png)
+![popupDeletarRegistro](https://user-images.githubusercontent.com/85248692/213282166-4d35c691-103b-4f98-b93d-dc7f9568df81.png)
 
 
 * ##### Editar Cliente
 
-![telaDetalhesListaClientesEditar](/uploads/38c5e00e5049f3e905a2d6d70e58a276/telaDetalhesListaClientesEditar.png)
-![popupClienteEditado](/uploads/8d5ddf6cf46771289fabf2ed373b3868/popupClienteEditado.png)
+![telaDetalhesListaClientesEditar](https://user-images.githubusercontent.com/85248692/213282588-48fb8fdc-5863-4b1f-bc22-7041a7a39b6a.png)
+![popupClienteEditado](https://user-images.githubusercontent.com/85248692/213282649-6b6b243e-4944-4e2e-b7df-510f25f0277a.png)
 
 
 * ##### Lista Clientes (Responsivo)
 
-![telaListaClientesResponsivo](/uploads/f824bd85c72d1aac963e71abfda08285/telaListaClientesResponsivo.png)
+![telaListaClientesResponsivo](https://user-images.githubusercontent.com/85248692/213282708-baf70d43-cc3b-4933-a7e7-73ba03545bf2.png)
 
 
 * ##### Detalhes Clientes (Responsivo)
 
-![telaDetalhesListaClientesResponsivo](/uploads/ac9d6f9004a85e92bde74457ec891cd9/telaDetalhesListaClientesResponsivo.png)
+![telaDetalhesListaClientesResponsivo](https://user-images.githubusercontent.com/85248692/213282773-90275339-21ad-4737-8ae7-2f6eef7ac0a9.png)
 
 
 * ##### Editar Cliente (Responsivo)
 
-![telaDetalhesListaClientesEditarResponsivo](/uploads/0bc6bdfc5f0a5194807b6c5edfddb20b/telaDetalhesListaClientesEditarResponsivo.png)
+![telaDetalhesListaClientesEditarResponsivo](https://user-images.githubusercontent.com/85248692/213282828-a1676012-be15-4dac-b376-8985f64765f8.png)
 
 
 * ##### Cadastro Clientes
 
-![telaCadastroClientes](/uploads/e9c0a5168a465fe7b95a3d276be4e1d2/telaCadastroClientes.png)
-![popupClienteCadastrado](/uploads/7744b488d0e08e3ac334ef39387a83dd/popupClienteCadastrado.png)
+![telaCadastroClientes](https://user-images.githubusercontent.com/85248692/213282862-d46cf3dd-b756-4c95-9062-e845cee81980.png)
+![popupClienteCadastrado](https://user-images.githubusercontent.com/85248692/213282916-cb27471e-268b-4cb1-94ba-0e4b7f2b91e5.png)
 
 
 * ##### Cadastro Clientes (Responsivo)
 
-![telaCadastroClientesResponsivo](/uploads/ddbbdc94d4af49ac9497fe7986b14691/telaCadastroClientesResponsivo.png)
+![telaCadastroClientesResponsivo](https://user-images.githubusercontent.com/85248692/213282971-6005acfb-6dcb-4d4d-8caa-39917062b31b.png)
 
 ## Terceira etapa
 Na terceira etapa foi desenvolvido as páginas de listagem e cadastro de vendas.<br> 
@@ -63,37 +63,37 @@ Implementado as funções de deletar, editar e buscar vendas, e também as valid
 ## Telas terceira etapa
 * ##### Lista Vendas
 
-![image](/uploads/af6b0dd90d4c036644d1ef2decd577fd/image.png)
+![image](https://user-images.githubusercontent.com/85248692/213283020-57dc0adc-ef51-4f02-b2cf-67d15b5632f2.png)
 
 
 * ##### Editar Venda
 
-![image](/uploads/2ad59af8077fb4e2596777020ce1179b/image.png)
+![image](https://user-images.githubusercontent.com/85248692/213283074-3596776c-3656-44d0-9f69-3c3051a73710.png)
 
 
 * ##### Lista Vendas (Responsivo)
 
-![image](/uploads/8cd403f5f7dc4340becc4566fd4adfc0/image.png)
+![image](https://user-images.githubusercontent.com/85248692/213283124-dc279ea8-82a9-4ee5-b351-9ff468758af6.png)
 
 
 * ##### Detalhes Venda (Responsivo)
 
-![image](/uploads/37631f8ab932c3188e5872e5ccaa628c/image.png)
+![image](https://user-images.githubusercontent.com/85248692/213283160-502806a0-c9f2-4fc1-a79a-6d1ad82fa74a.png)
 
 
 * ##### Editar Venda (Responsivo)
 
-![image](/uploads/5783507bc42eb06a6c2011fb58f6daa9/image.png)
+![image](https://user-images.githubusercontent.com/85248692/213283209-1719b290-a95a-42fb-8dc5-5718f62eda74.png)
 
 
 * ##### Cadastro Venda
 
-![image](/uploads/8729337b35ce204afc639e949002b917/image.png)
+![image](https://user-images.githubusercontent.com/85248692/213283256-98ab075c-95f5-4a87-bdc2-07acd7d771f4.png)
 
 
 * ##### Cadastro Venda (Responsivo)
 
-![image](/uploads/20b3558d6e0e451817e77e7a3a594c9a/image.png)
+![image](https://user-images.githubusercontent.com/85248692/213283311-20078860-23a3-4c4e-81a1-5ecbf8c35223.png)
 
 ## Quarta etapa
 Na quarta etapa, fizemos o modelo conceitual e logico do banco de dados que vamos usar, mas somente para aprendizado, pois vamos criar o Banco de Dado atravé do Entity Framework Core no .NET.
@@ -101,12 +101,12 @@ Na quarta etapa, fizemos o modelo conceitual e logico do banco de dados que vamo
 ## Telas quarta etapa
 * ##### Diagrama modelo conceitual
 
-![diagrama_modelo_conceitual](/uploads/c038361f3774a3c0a7bdc931996d5d7b/diagrama_modelo_conceitual.png)
+![diagrama_modelo_conceitual](https://user-images.githubusercontent.com/85248692/213283339-da7b84f4-4a1c-48e0-a636-ab1ce2061b3d.png)
 
 
 * ##### Diagrama modelo lógico
 
-![diagrama_modelo_logico](/uploads/f1e637be3109991f03eea220f3e2f8e7/diagrama_modelo_logico.png)
+![diagrama_modelo_logico](https://user-images.githubusercontent.com/85248692/213283414-b8f35a66-345a-4321-a93a-82a0201b85ba.png)
 
 ## Quinta etapa
 Na quinta etapa criamos a API usando a arquitetura DDD (Domain Driven Design), onde dividmos o projeto em três camadas:
@@ -117,7 +117,7 @@ Na quinta etapa criamos a API usando a arquitetura DDD (Domain Driven Design), o
 ## Tela quinta etapa
 * ##### Arquitetura API
 
-![arquitetura-backend](/uploads/574f9c0c14436909e7d7b8c44d93fa1e/arquitetura-backend.jpg)
+![arquitetura-backend](https://user-images.githubusercontent.com/85248692/213283453-22eee8f8-c06d-4582-a935-0a3b44da3427.jpg)
 
 ## Sexta etapa
 Na sexta etapa apenas fizemos a integração do Frontend com o Backend, e criamos a tela de cadastro de usuário e a tela de login.
@@ -125,7 +125,7 @@ Na sexta etapa apenas fizemos a integração do Frontend com o Backend, e criamo
 ## Tela sexta etapa
 * ##### Login/Cadastro usuário
 
-![tela-login-cadastro](/uploads/cb5024202009d1397a90bea11fe0c9f9/tela-login-cadastro.mp4)
+https://user-images.githubusercontent.com/85248692/213283601-b377f728-f70b-4577-a08f-917a98eaabf5.mp4
 
 ## Etapa bônus
 Não tava na ideia do projeto, mas resolvi criar um container docker para subir com mais facilidade o projeto na etapa de desenvolvimento, criando um container para o Frontend, uma para o Backend e um para o Banco de Dados (Por questão de segurança, em ambiente de produção não subam o Banco de Dados no docker.) e juntando todos com o docker compose.
@@ -133,7 +133,7 @@ Não tava na ideia do projeto, mas resolvi criar um container docker para subir 
 ## Tela etapa bônus
 * ##### Docker Compose
 
-![docker](/uploads/195f5f24c2a96ad5f972120ca0c952ea/docker.jpg)
+![docker](https://user-images.githubusercontent.com/85248692/213283665-cbdded89-4352-46e1-b032-8ee1fef7b82a.jpg)
 
 ## Execução
 * Primeiramente instalar o docker em sua máquina.<br>Segue o link de um ótimo artigo do Balta, com o passo a passo de como instalar o docker:<br>
