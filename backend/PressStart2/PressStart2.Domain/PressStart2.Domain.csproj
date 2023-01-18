@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Commands\UsuarioCommands\NovaPasta1\**" />
+    <Compile Remove="Commands\UsuarioCommands\NovaPasta2\**" />
+    <Compile Remove="Commands\UsuarioCommands\NovaPasta3\**" />
+    <Compile Remove="Commands\UsuarioCommands\NovaPasta\**" />
+    <EmbeddedResource Remove="Commands\UsuarioCommands\NovaPasta1\**" />
+    <EmbeddedResource Remove="Commands\UsuarioCommands\NovaPasta2\**" />
+    <EmbeddedResource Remove="Commands\UsuarioCommands\NovaPasta3\**" />
+    <EmbeddedResource Remove="Commands\UsuarioCommands\NovaPasta\**" />
+    <None Remove="Commands\UsuarioCommands\NovaPasta1\**" />
+    <None Remove="Commands\UsuarioCommands\NovaPasta2\**" />
+    <None Remove="Commands\UsuarioCommands\NovaPasta3\**" />
+    <None Remove="Commands\UsuarioCommands\NovaPasta\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="11.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.12" />
+    <PackageReference Include="prmToolkit.NotificationPattern" Version="1.1.5" />
+    <PackageReference Include="SecureIdentity" Version="1.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PressStart2.Infra.CrossCutting\PressStart2.Infra.CrossCutting.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Commands\UsuarioCommands\ValidarTokenUsuario\" />
+  </ItemGroup>
+
+</Project>

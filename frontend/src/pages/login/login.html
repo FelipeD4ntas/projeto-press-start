@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../../assets/img/favicon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../../css/index.css" type="text/css">
+  <link rel="stylesheet" href="../../css/responsivo.css" type="text/css">
+  <link rel="stylesheet" href="../../css/login.css" type="text/css">
+  <title>Login</title>
+</head>
+<body>
+  <section class="conteudo-principal-pagina-inicial">
+    <div class="pagina-inicial-lado-esquerdo">
+      <div class="pagina-inicial-lado-esquerdo-logo-lyncas">
+        <img src="../../assets/img/logo-lyncas-branco.png" alt="Logo Lyncas"/>
+      </div>
+  
+      <div class="pagina-inicial-lado-esquerdo-descricao-lyncas">
+        <p>
+          Bem-vindo ao Lyncas Sales, uma aplicação<br>
+          simples para gerenciar vendas e clientes.
+        </p>
+      </div>
+    </div>
+  
+    <div class="pagina-inicial-lado-direito">
+      <h1>Login</h1>
+      <form class="form-login" data-js="form-login">
+        <div id="msgErro"></div>
+        <div class="box-input-email-usuario">
+          <label for="emailUsuario">
+            <input type="email" id="emailUsuario" name="emailUsuario" placeholder="E-mail" required>
+            <span class="mensagem-input-valido" data-js="mensagem-email-usuario-invalido">Email inválido.</span>
+          </label>
+        </div>
+  
+        <div class="box-input-senha-usuario">
+          <label for="senhaUsuario">
+            <input type="password" id="senhaUsuario" name="senhaUsuario" placeholder="Senha" required>
+            <span class="mensagem-input-valido" data-js="mensagem-senha-usuario-invalido">
+              Senha deve conter 8 digitos sendo pelo menos:<br>
+              1 caractere minúsculo<br>
+              1 caractere maiúsculo<br>
+              1 caractere numérico
+            </span>
+          </label>
+        </div>
+  
+        <div class="box-form-btn-entrar" data-js="box-form-btn-entrar">
+          <button type="submit">Entrar</button>
+        </div>
+      </form>
+      <div class="box-link-criar-conta">
+        <p>Ainda não tem conta? <button data-js="button-criar-conta">Criar conta</button></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="box-form-criar-usuario" data-js="box-form-criar-usuario">
+    <div class="conteudo-principal-telaAddUsuario">
+      <form data-js="form-add-usuario" class="form-add-usuario">
+        <div class="logo-lyncas-criar-usuario">
+          <img src="../../assets/img/logo-lyncas-azul.png" alt="Logo Lyncas"/>
+        </div>
+        <h2 data-js="titulo-form-add-usuario">Criar Conta</h2>
+        <div class="box-form-conjunto-input conjunto-input">
+          <label for="nome-criar-usuario">
+            Nome
+            <input type="text" id="nomeCriarUsuario" name="nome-criar-usuario" required>
+            <span class="mensagem-input-valido" data-js="mensagem-nome-criar-usuario-invalido">Deve conter pelo menos três caracteres.</span>
+          </label>
+    
+          <label for="email-criar-usuario">
+            Email
+            <input type="email" id="emailCriarUsuario" name="email-criar-usuario" required>
+            <span class="mensagem-input-valido" data-js="mensagem-email-criar-usuario-invalido">E-mail inválido.</span>
+          </label>
+        </div>
+    
+        <div class="box-form-conjunto-input conjunto-input">
+          <label for="senha-criar-usuario">
+            Senha
+            <input type="password" id="senhaCriarUsuario" name="senha-criar-usuario" required>
+            <span class="mensagem-input-valido" data-js="mensagem-senha-criar-usuario-invalido">
+              Senha deve conter 8 digitos sendo pelo menos:<br>
+              1 caractere minúsculo<br>
+              1 caractere maiúsculo<br>
+              1 caractere numérico
+            </span>
+          </label>
+    
+          <label for="confirmar-senha-usuario">
+            Confirmar Senha
+            <input type="password" id="confirmarSenhaUsuario" name="confirmar-senha-usuario" required>
+            <span class="mensagem-input-valido" data-js="mensagem-confirmar-senha-invalido">Senhas não conferem.</span>
+          </label>
+        </div>
+    
+        <div class="box-form-btn-salvar-usuario" data-js="box-form-btn-salvar-usuario">
+          <button type="submit">Criar Conta</button>
+        </div>
+        <div class="box-form-btn-cancelar" data-js="box-form-btn-cancelar">
+          <button type="button" class="btn-cancelar">Cancelar</button>
+        </div>
+      </form>
+    </div>
+    
+    <div data-js="popup-adicionar-registro" class="popup">
+      <div class="conteudo-popup">
+        <a target="_self" data-js="link-fechar-popup-criar-usuario">
+          <button class="closedPopup">X</button>
+        </a>
+        <p data-js="conteudo-popup-criar-usuario" class="conteudo-popup-criar-usuario"></p>
+        <div class="popup-box-btn-ok">
+          <a target="_self" class="link-finalizar-registro" data-js="link-fechar-popup-criar-usuario">
+            <button class="finalizar-registro">OK</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="../../services/usuarioServices/login.js" type="module"></script>
+</body>
+</html>
+
+
+
+
+

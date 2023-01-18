@@ -1,0 +1,41 @@
+version: '3.4'
+
+services:
+  pressstart2frontend:
+    image: ${DOCKER_REGISTRY-}pressstart2frontend
+    build:
+      context: frontend
+      dockerfile: ./src/Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:80
+    depends_on:
+      - pressstart2
+
+  pressstart2:
+    image: ${DOCKER_REGISTRY-}pressstart2
+    build:
+      context: .
+      dockerfile: ./backend/PressStart2/Dockerfile
+    ports:
+      - 8080:80
+    depends_on:
+        sqldata:
+          condition: service_healthy
+
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+        ACCEPT_EULA: "Y"
+        SA_PASSWORD: "1q2w3e4r@#$$"
+    healthcheck:
+      test: "/opt/mssql-tools/bin/sqlcmd -S localhost,1433 -U sa -P 1q2w3e4r@#$$"
+      interval: 2s
+      timeout: 20s
+      retries: 10
+    ports: 
+        - "1433:1433"
+    volumes:
+        - c:\dados\volumes\mssql:/var/opt/mssql/data 
+

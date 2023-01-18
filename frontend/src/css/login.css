@@ -1,0 +1,30 @@
+body {
+  overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .form-login {
+    margin-bottom: 0;
+  }
+
+  .form-add-usuario h2 {
+    text-align: center;
+  }
+
+  .pagina-inicial-lado-direito h1 {
+    margin-top: 0;
+  }
+
+  .logo-lyncas-criar-usuario {
+    margin-bottom: 0;
+  }
+
+  .box-form-btn-salvar-usuario button {
+    margin-top: 0;
+  }
+
+  .box-form-btn-cancelar button {
+    width: 100%;
+    margin-top: 5px;
+  }
+}

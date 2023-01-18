@@ -1,0 +1,105 @@
+<div class="conteudo-principal-clientes-vendas-header" data-js="conteudo-principal-clientes-header">
+  <div class="conteudo-principal-clientes-vendas-header-titulo">
+    <h2>Lista de Vendas</h2>
+    <a href="#telaAddVendas" target="_Self" class="btn-mobile-adicionar">+</a>
+  </div>
+  <div class="conteudo-principal-clientes-vendas-header-input-buscar">
+    <input type="text" name="buscar-clientes" placeholder="Buscar venda..." data-js="input-buscar">
+    <button>
+      <img src="assets/img/search-icon.svg" alt="icone buscar">
+    </button>
+  </div>
+</div>
+
+<div class="conteudo-principal-box-lista" data-js="tabela-vendas">
+  <table class="conteudo-principal-box-lista-itens-lista">
+    <thead>
+      <tr>
+        <th>Cliente</th>
+        <th>Qtd. itens</th>
+        <th>Data da venda</th>
+        <th>Data faturamento</th>
+        <th>Valor total</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+
+    <tbody data-js="corpo-tabela-itens-lista-vendas"></tbody>
+  </table>
+</div>
+
+<form class="conteudo-principal-telaEditarVenda-box-form" data-js="form-editar-venda">
+  <h2 data-js="titulo-form">Editar venda</h2>
+  <div class="box-form-conjunto-input conjunto-input">
+    <label for="nome-cliente">
+      Cliente
+      <select id="selectCliente" name="nome-cliente" class="select-clientes" data-js="select-cliente"></select>
+      <img class="icone-select" src="./assets/img/icone-select.png" alt="icone select"/>
+      <span class="mensagem-input-valido" data-js="mensagem-nome-invalido">Deve conter pelo menos três caracteres.</span>
+    </label>
+
+    <label for="dataFaturamento">
+      Data de faturamento
+      <input type="text" id="dataFaturamento" name="dataFaturamento" maxlength="10" required>
+      <span class="mensagem-input-valido" data-js="mensagem-data-invalida">Data inválida.</span>
+    </label>
+  </div>
+
+  <div class="box-forms-itens-pedido">
+    <h3 data-js="subtitulo-form" class="subtitulo-form">Itens do pedido</h3>
+    <div class="box-itens-do-pedido" data-js="box-itens-do-pedido">
+      <div class="box-form-conjunto-input conjunto-input">
+        <label for="descricaoItem">
+          Descrição do item
+          <input type="text" id="descricaoItem" name="descricaoItem" data-js="descricao-item" required>
+          <span class="mensagem-input-valido" data-js="mensagem-descricao-invalida">Descrição deve conter pelo menos sete caracteres.</span>
+        </label>
+        <label for="precoUnitario">
+          Valor unitário
+          <input type="text" id="precoUnitario" name="precoUnitario"data-js="preco-unitario" required>
+          <span class="mensagem-input-valido" data-js="mensagem-valor-invalido">Valor inválido.</span>
+        </label>
+      </div>
+      <div class="box-form-conjunto-input conjunto-input">
+        <label for="quantidadeItem">
+          Quantidade
+          <input type="number" id="quantidadeItem" name="quantidadeItem" data-js="quantidade-item" required>
+          <span class="mensagem-input-valido" data-js="mensagem-quantidade-invalida">Escolha uma quantidade.</span>
+        </label>
+        <label for="valorTotal">
+          Valor total
+          <input type="text" id="valorTotal" name="valorTotal" data-js="soma-valores" disabled>
+        </label>
+      </div>
+    </div>
+    <div class="btn-mais-itens" data-js="box-btn-mais-itens">
+      <button type="button" data-js="btn-mais-itens">+ Mais itens</button>
+    </div>
+  </div>
+
+  <div class="box-form-btn-salvar box-btn-salvar-venda" data-js="box-form-btn-salvar">
+    <p class="saida-total-vendas">Total: <span data-js="valor-total"><span class="cifrao">R$ </span></span></p>
+    <button type="submit">Salvar</button>
+  </div>
+</form>
+
+<div data-js="popup-editar-registro" class="popup">
+  <div class="conteudo-popup">
+    <button class="closedPopup">X</button>
+    <p data-js="conteudo-popup-editar-venda"></p>
+    <div class="popup-box-btn-ok">
+      <button class="finalizar-edicao">OK</button>
+    </div>
+  </div>
+</div>
+
+<div data-js="popup-apagar-registro" class="popup">
+  <div class="conteudo-popup">
+    <button class="closedPopup">X</button>
+    <p>Apagar Registro?</p>
+    <div class="popup-box-btn-confirmar-cancelar">
+      <button class="confirmarExclusao">SIM</button>
+      <button class="cancelarExclusao">NÃO</button>
+    </div>
+  </div>
+</div>

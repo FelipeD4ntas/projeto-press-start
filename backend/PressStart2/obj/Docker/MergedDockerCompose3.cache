@@ -1,0 +1,31 @@
+services:
+  pressstart2:
+    build:
+      context: C:\Users\felip\OneDrive\┴rea de Trabalho\Lyncas\Projetos\projetoPressStart\backend\PressStart2
+      dockerfile: PressStart2\Dockerfile
+    depends_on:
+      sqldata:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: pressstart2
+    ports:
+    - published: 8081
+      target: 80
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\felip\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\felip\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  sqldata:
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: 1q2w3e4r@#$$
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    ports:
+    - published: 1433
+      target: 1433
+    volumes:
+    - c:\dados\volumes\mssql:/var/opt/mssql/data:rw
+version: '3.4'

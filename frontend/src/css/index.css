@@ -1,0 +1,867 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;400;500;700&display=swap');
+
+* {
+  font-family: 'Jost', sans-serif;
+  text-decoration: none;
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: 0;
+}
+
+:root {
+  --cor-principal: #274A9D;
+  --cor-texto: #26324B;
+  --cor-texto-secundario: #7B828D;
+  --cor-texto-links: #FFFFFF;
+  --cor-bordas: #1C3B85;
+  --cor-bordas-secundario: #E5EBF1;
+  --cor-bordas-input-valido: #03C874;
+  --cor-bordas-input-invalido: #ff0000;
+  --cor-background: #F8F8F8;
+  --cor-background-secundario: #FFFFFF;
+  --cor-background-btn-editar: #F6FAFD;
+  --cor-background-btn-deletar: #FDF6F6;
+  --cor-background-btn-adicionar: #03C874;
+  --cor-btn: #BFBFBF;
+  --cor-btn-editar: #6490CA;
+  --cor-btn-deletar: #C27476;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background: var(--cor-background-secundario);
+}
+
+.menu-lateral {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  "logo" 
+  "links";
+  justify-items: center;
+  background: var(--cor-principal);
+  padding: 60px 15px;
+  width: 170px;
+  height: 100vh;
+  float: left;
+}
+
+.menu-lateral-logo-lyncas {
+  grid-area: logo;
+}
+
+.menu-lateral-logo-lyncas img {
+  width: 105px;
+}
+
+.menu-lateral-links {
+  grid-area: links;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu-lateral-links a {
+  display: flex;
+  align-items: center;
+  color: var(--cor-texto-links);
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--cor-bordas);
+}
+
+.menu-lateral-links a:focus{
+  background: var(--cor-bordas);
+}
+
+.menu-lateral-links img {
+  margin-right: 10px;
+}
+
+.box-principal {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  clear: right;
+  background: var(--cor-background);
+}
+
+.header-telas-com-menu {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 2px solid var(--cor-bordas-secundario);
+  margin: 0 20px;
+  padding: 40px 0px;
+}
+
+.header-telas-sem-menu {
+  display: none;
+  align-items: center;
+  border-bottom: 2px solid var(--cor-bordas-secundario);
+  margin: 0 20px;
+  padding: 40px 0px;
+  padding-top: 70px;
+}
+
+.header-telas-sem-menu-box-btn {
+  width: 24px;
+  height: 24px;
+}
+
+.header-telas-sem-menu-box-btn a {
+  display: flex;
+  align-items: center;
+}
+
+.header-telas-sem-menu-box-titulo {
+  width: calc(100% - 48px);
+  text-align: center;
+}
+
+.info-usuario {
+  display: flex;
+  align-items: center;
+}
+
+.info-usuario-foto-perfil {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.info-usuario-foto-perfil img {
+  width: 50px;
+  height: 50px;
+}
+
+.info-usuario-btn-sair p {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.btn-voltar-header {
+  display: flex;
+}
+
+.btn-voltar {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  width: 200px;
+  color: var(--cor-texto-links);
+  background: var(--cor-btn);
+  padding: 11px 45px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-sair {
+  font-size: 1.8rem;
+  color: var(--cor-texto-secundario);
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn-sair-mobile {
+  display: none;
+}
+
+.btn-adicionar-header {
+ display: flex;
+}
+
+.btn-adicionar {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--cor-texto-links);
+  background: var(--cor-background-btn-adicionar);
+  cursor: pointer;
+}
+
+.btn-mobile-adicionar {
+  display: none;
+}
+
+.info-usuario-btn-voltar button:hover,
+.btn-adicionar:hover,
+.confirmarExclusao:hover,
+.cancelarExclusao:hover {
+  transform: scale(0.98);
+}
+
+.ocultar-item {
+  display: none !important;
+}
+
+.mostrar-item {
+  display: table-row;
+}
+
+
+/* Conteudo do Main */
+.conteudo-principal {
+  height: 100%;
+  margin: 25px 20px;
+  overflow: hidden;
+}
+
+/* Conteudo da tela Boas-vindas */
+.conteudo-principal-dashboard-boas-vindas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+.conteudo-principal-dashboard-boas-vindas p {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+/* Conteudo da tela Clientes */
+.conteudo-principal-clientes,
+.conteudo-principal-vendas {
+  height: 100%;
+}
+
+.conteudo-principal-clientes-vendas-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.conteudo-principal-clientes-vendas-header-titulo {
+  display: flex;
+  align-items: center;
+}
+
+.conteudo-principal-clientes-vendas-header-titulo h2 {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.conteudo-principal-clientes-vendas-header-input-buscar {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.conteudo-principal-clientes-vendas-header-input-buscar input[type="text"] {
+  width: 410px;
+  background: var(--cor-background-secundario);
+  border: 1px solid var(--cor-bordas-secundario);
+  border-right: none;
+  border-radius: 5px 0px 0px 5px;
+  padding: 15px;
+  float: left;
+}
+
+.conteudo-principal-clientes-vendas-header-input-buscar input[type="text"]::placeholder {
+  font-size: 1.6rem;
+  color: var(--cor-btn);
+}
+
+.conteudo-principal-clientes-vendas-header-input-buscar button {
+  background: var(--cor-background-secundario);
+  border: 1px solid var(--cor-bordas-secundario);
+  border-left: none;
+  border-radius: 0px 5px 5px 0px;
+  padding: 0 15px;
+  float: left;
+  cursor: pointer;
+}
+
+.conteudo-principal-box-lista {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80%;
+  overflow-y: scroll;
+}
+
+.conteudo-principal-box-lista-itens-lista {
+  max-height: 100px;
+  width: 100%;
+  border-spacing: 0px 20px;
+}
+
+.conteudo-principal-box-lista-itens-lista thead {
+  width: 100%;
+  height: 38px;
+  background: var(--cor-background);
+  position: sticky;
+  top: -1px;
+  z-index: 2;
+}
+
+.conteudo-principal-box-lista-itens-lista thead th {
+  font-weight: 400;
+  text-align: left;
+  color: var(--cor-texto-secundario);
+  margin-bottom: 18px;
+  padding: 0 15px;
+}
+
+.conteudo-principal-box-lista-itens-lista tbody {
+  height: 10px;
+}
+
+.conteudo-principal-box-lista-itens-lista tbody td {
+  font-size: 1.4rem;
+  font-weight: 500;
+  background: var(--cor-background-secundario);
+  padding: 15px;
+}
+
+.conteudo-principal-box-lista-itens-lista tbody td:nth-of-type(1) {
+  border-radius: 5px 0 0 5px;
+}
+
+.conteudo-principal-box-lista-itens-lista tbody td:nth-of-type(5) {
+  border-radius: 0 5px 5px 0;
+}
+
+.coluna-cliente-inativo {
+  display: none;
+  text-align: center;
+  color: var(--cor-btn-deletar);
+}
+
+.btn-editar-itens-lista,
+.btn-deletar-itens-lista {
+  font-size: 1.4rem;
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.btn-editar-itens-lista {
+  color: var(--cor-btn-editar);
+  background: var(--cor-background-btn-editar);
+}
+
+.btn-mobile-editar {
+  display: none;
+}
+
+.btn-mobile-deletar {
+  display: none;
+}
+
+.coluna-btn-deletar-editar {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.btn-deletar-itens-lista {
+  color: var(--cor-btn-deletar);
+  background: var(--cor-background-btn-deletar);
+}
+
+.icone-detalhes-clientes,
+.icone-detalhes-vendas {
+  display: none;
+}
+
+.btn-detalhes img {
+  height: 100%;
+}
+
+/* Conteudo da tela Adicionar Clientes */
+.conteudo-principal-telaAddClientes {
+  height: 100%;
+}
+
+.conteudo-principal-telaAddClientes-telaAddVendas-box-form,
+.conteudo-principal-telaEditarClientes-box-form,
+.conteudo-principal-telaEditarVenda-box-form {
+  background: var(--cor-background-secundario);
+  padding: 25px 25px 75px 25px;
+}
+
+.conteudo-principal-telaAddUsuario {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  background: var(--cor-background-secundario);
+  padding: 25px 25px 75px 25px;
+}
+
+.form-add-usuario {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-add-usuario h2 {
+  font-size: 3rem;
+}
+
+.conteudo-principal-telaEditarClientes-box-form,
+.conteudo-principal-telaEditarVenda-box-form {
+  display: none;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.box-form-conjunto-input {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.box-form-conjunto-input label {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  color: var(--cor-texto-secundario);
+  margin-top: 10px;
+  width: 100%;
+  position: relative;
+}
+
+.box-form-conjunto-input input,
+.box-form-conjunto-input select {
+  border: 1px solid var(--cor-bordas-secundario);
+  border-radius: 5px;
+  padding: 10px;
+  height: 51px;
+  display: flex;
+}
+
+.conjunto-input label:nth-of-type(1) input,
+.conjunto-input label:nth-of-type(1) input,
+.conjunto-input label:nth-of-type(1) select {
+  margin-right: 15px;
+}
+
+.box-form-conjunto-input select {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+}
+
+.icone-select {
+  width: 16px;
+  height: 8px;
+  position: absolute;
+  right: 25px;
+  top: 45px;
+}
+
+.box-form-btn-salvar, 
+.box-form-btn-salvar-usuario,
+.box-form-btn-cancelar {
+  display: flex;
+  justify-content: end;
+}
+
+.box-form-btn-salvar button, 
+.box-form-btn-salvar-usuario button {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  width: calc(50% - 10px);
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  color: var(--cor-texto-links);
+  background: var(--cor-background-btn-adicionar);
+  cursor: pointer;
+}
+
+.box-form-btn-cancelar button {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  width: calc(50% - 10px);
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  color: var(--cor-texto-links);
+  background: var(--cor-bordas-input-invalido);
+  cursor: pointer;
+}
+
+/*POPUP */
+.popup {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #00000080;
+  z-index: 175;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.conteudo-popup {
+  background: var(--cor-bordas);
+  width: 25%;
+  min-width: 300px;
+  padding: 20px;
+  border: 10px solid var(--cor-background);
+  box-shadow: 0 0 0 10px var(--cor-bordas);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--cor-texto-links);
+
+}
+
+.conteudo-popup p {
+  text-align: center;
+}
+
+.closedPopup {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 4px solid var(--cor-background);
+  background: var(--cor-bordas);
+  color: var(--cor-texto-links);
+  font-weight: bold;
+  font-size: 1.2em;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 #0000004d;
+}
+
+.popup.mostrar-popup {
+  display: flex;
+}
+
+.conteudo-popup-adicionar-cliente,
+.conteudo-popup-criar-usuario {
+  text-align: center;
+}
+
+@keyframes desceu {
+  from {
+      opacity: 0;
+      transform: translate3d(0, -70px, 0);
+  }
+  to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+  }
+}
+
+.mostrar-popup .conteudo-popup {
+  animation: desceu .3s;
+}
+
+.popup-box-btn-confirmar-cancelar,
+.popup-box-btn-ok {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+
+.confirmarExclusao,
+.cancelarExclusao,
+.link-finalizar-registro,
+.finalizar-edicao {
+  flex: 1 1 auto;
+  width: max-content;
+  padding: 5px;
+  border: 3px solid var(--cor-background);
+  margin-top: 15px;
+  font-size: 1.1em;
+  background: transparent;
+  font-weight: bold;
+  color: var(--cor-texto-links);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.finalizar-registro {
+  width: 100%;
+  font-size: 1.1em;
+  font-weight: bold;
+  background: transparent;
+  color: var(--cor-texto-links);
+  cursor: pointer;
+}
+
+.confirmar-alerta-deletar {
+  width: 100%;
+  margin-top: 15px;
+  border: 3px solid var(--cor-background);
+  border-radius: 5px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: var(--cor-texto-links);
+  background: transparent;
+}
+
+.conteudo-alerta-deletar {
+  text-align: center;
+}
+
+/*Validação dos inputs*/
+
+.input-neutro {
+  border-color: var(--cor-bordas-secundario);  
+}
+
+.input-valido {
+  border-color: var(--cor-bordas-input-valido) !important;
+}
+
+.input-invalido {
+  border-color: var(--cor-bordas-input-invalido) !important;
+}
+
+.mensagem-input-invalido {
+  display: block;
+  font-size: 1.3rem;
+  color: var(--cor-bordas-input-invalido);
+}
+
+.mensagem-input-valido {
+  display: none;
+}
+
+.conteudo-principal-pagina-inicial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+  position: relative;
+}
+
+.pagina-inicial-lado-esquerdo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--cor-principal);
+  height: 100%;
+  flex: 1 1 auto;
+}
+
+.pagina-inicial-lado-esquerdo-logo-lyncas {
+  margin-bottom: 30px;
+}
+
+.pagina-inicial-lado-esquerdo-logo-lyncas img {
+  width: 240px;
+  height: 55px;
+}
+
+.pagina-inicial-lado-esquerdo-descricao-lyncas p {
+  font-size: 2.4rem;
+  color: var(--cor-texto-links);
+}
+
+.pagina-inicial-lado-direito {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  flex: 1 1 auto;
+}
+
+.pagina-inicial-lado-direito h1 {
+  font-size: 4rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pagina-inicial-lado-direito label {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  color: var(--cor-texto-secundario);
+  margin-top: 20px;
+  width: 450px;
+}
+
+.pagina-inicial-lado-direito input {
+  font-size: 1.7rem;
+  border: 1px solid var(--cor-bordas-secundario);
+  border-radius: 5px;
+  padding: 10px;
+  height: 51px;
+  display: flex;
+}
+
+.box-form-btn-entrar {
+  display: flex;
+  justify-content: center;
+  width: 450px;
+}
+
+.box-form-btn-entrar button{
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  color: var(--cor-texto-links);
+  background: var(--cor-background-btn-adicionar);
+  cursor: pointer;
+}
+
+/* Conteudo da tela Adicionar vendas */
+.conteudo-principal-telaAddVendas {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.conteudo-principal-add-venda {
+  padding: 25px;
+  border-radius: 5px;
+}
+
+.box-forms-itens-pedido {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 0;
+  margin: 20px 0;
+  border-top: 1px dashed var(--cor-bordas-secundario);
+  border-bottom: 1px dashed var(--cor-bordas-secundario);
+}
+
+.subtitulo-form {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.btn-mais-itens {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-mais-itens button {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  width: calc(50% - 10px);
+  height: 51px;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid var(--cor-principal);
+  border-radius: 5px;
+  color: var(--cor-principal);
+  background: transparent;
+  cursor: pointer;
+}
+
+.box-btn-salvar-venda {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.saida-total-vendas {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--cor-texto);
+}
+
+.detalhes-vendas {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--cor-background-btn-adicionar);
+}
+
+.novo-item-venda {
+  border-top: 1px dashed var(--cor-bordas-secundario);
+  margin-top: 30px;
+}
+
+.box-form-criar-usuario {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  transition: 1s;
+}
+
+.logo-lyncas-criar-usuario {
+  align-self: center;
+  margin-bottom: 50px;
+}
+
+.logo-lyncas-criar-usuario img {
+  width: 250px;
+}
+
+.box-link-criar-conta {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.box-link-criar-conta p {
+  font-weight: 500;
+}
+
+.box-link-criar-conta button {
+  color: var(--cor-principal);
+  background: transparent;
+  font-weight: 700;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.icone-deletar-item {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+  margin-top: 10px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.icone-deletar-item img {
+  width: 30px;
+}
+
+#msgErro {
+  text-align: center;
+  color: #ff0000;
+  background-color: #ffbbbb;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+}

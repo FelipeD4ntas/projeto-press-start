@@ -1,0 +1,16 @@
+services:
+  pressstart2:
+    build:
+      context: C:\Users\felip\OneDrive\Área de Trabalho\Lyncas\Projetos\projetoPressStart\backend\PressStart2
+      dockerfile: PressStart2/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: pressstart2
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\felip\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\felip\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

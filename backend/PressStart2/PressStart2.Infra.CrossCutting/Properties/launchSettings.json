@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "PressStart2.Infra.CrossCutting": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:57150;http://localhost:57151"
+    }
+  }
+}

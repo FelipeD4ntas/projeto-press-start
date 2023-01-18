@@ -1,0 +1,50 @@
+<div class="conteudo-principal-telaAddClientes-telaAddVendas-box-form">
+  <form data-js="form-add-cliente" class="form-add-cliente-venda">
+    <h2 data-js="titulo-form">Adicionar cliente</h2>
+    <div class="box-form-conjunto-input conjunto-input">
+      <label for="nome-cliente">
+        Nome
+        <input type="text" id="nomeCliente" name="nome-cliente" required>
+        <span class="mensagem-input-valido" data-js="mensagem-nome-invalido">Deve conter pelo menos três caracteres.</span>
+      </label>
+
+      <label for="email-cliente">
+        Email
+        <input type="email" id="emailCliente" name="email-cliente" required>
+        <span class="mensagem-input-valido" data-js="mensagem-email-invalido">E-mail inválido.</span>
+      </label>
+    </div>
+
+    <div class="box-form-conjunto-input conjunto-input">
+      <label for="telefone-cliente">
+        Telefone
+        <input type="tel" id="telefoneCliente" name="telefone-cliente" required>
+        <span class="mensagem-input-valido" data-js="mensagem-telefone-invalido">Telefone inválido.</span>
+      </label>
+
+      <label for="cpf-cliente">
+        CPF
+        <input type="text" id="cpfCliente" name="cpf-cliente" required>
+        <span class="mensagem-input-valido" data-js="mensagem-cpf-invalido">CPF inválido.</span>
+      </label>
+    </div>
+
+    <div class="box-form-btn-salvar" data-js="box-form-btn-salvar">
+      <button type="submit">Salvar</button>
+    </div>
+  </form>
+</div>
+
+<div data-js="popup-adicionar-registro" class="popup">
+  <div class="conteudo-popup">
+    <a target="_self" data-js="link-fechar-popup-adicionar-cliente">
+      <button class="closedPopup">X</button>
+    </a>
+    <p data-js="conteudo-popup-adicionar-cliente" class="conteudo-popup-adicionar-cliente"></p>
+    <div class="popup-box-btn-ok">
+      <a target="_self" class="link-finalizar-registro" data-js="link-fechar-popup-adicionar-cliente">
+        <button class="finalizar-registro">OK</button>
+      </a>
+    </div>
+  </div>
+</div>
