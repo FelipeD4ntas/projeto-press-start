@@ -163,4 +163,4 @@ Não tava na ideia do projeto, mas resolvi criar um container docker para subir 
  docker-compose up
 ```
 
-* Com o container pronto para uso, acessar o projeto através do link:<br> **http://localhost:3000/**
+* Com o container pronto para uso, acessar o projeto através do link:<br> **http://localhost:3030/**
