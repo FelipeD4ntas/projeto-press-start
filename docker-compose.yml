@@ -3,13 +3,11 @@ version: '3.4'
 services:
   pressstart2frontend:
     image: ${DOCKER_REGISTRY-}pressstart2frontend
-    build:
-      context: frontend
-      dockerfile: ./src/Dockerfile
-    environment:
-      NODE_ENV: production
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile
     ports:
-      - 3000:80
+      - 3030:80
     depends_on:
       - pressstart2
 

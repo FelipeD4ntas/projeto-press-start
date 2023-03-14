@@ -32,10 +32,11 @@ namespace PressStart2.Controllers
 
         [HttpGet]
         [Route("listar")]
-        public async Task<IActionResult> Listar()
+        public async Task<IActionResult> Listar([FromQuery] ListarClienteRequest request)
         {
-            CommandResponse response = await _mediator.Send(new ListarClienteRequest());
-
+            CommandResponse response = await _mediator.Send(request);
+            
+           
             if (response.Sucesso)
             {
                 return Ok(response);

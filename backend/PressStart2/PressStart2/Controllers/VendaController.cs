@@ -38,9 +38,9 @@ namespace PressStart2.Controllers
 
         [HttpGet]
         [Route("listar")]
-        public async Task<IActionResult> listar()
+        public async Task<IActionResult> Listar([FromQuery] ListarVendaRequest request)
         {
-            var response = await _mediator.Send(new ListarVendaRequest());
+            var response = await _mediator.Send(request);
 
             if (response.Sucesso)
             {

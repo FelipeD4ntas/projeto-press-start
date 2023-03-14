@@ -28,7 +28,14 @@ namespace PressStart2.Domain.Commands.VendaCommands.AdicionarVenda
                 return Task.FromResult(new CommandResponse(this));
             }
 
-            var venda = new Venda(cliente.Id, request.DataFaturamento, request.Itens.Count, request.Itens.Sum(item => item.ValorTotal));
+            if (request.DataFaturamento.Date < DateTime.Now.Date)
+            {
+                AddNotification(Notificacoes.VENDA_MODULO, Notificacoes.DATA_FATURAMENTO_INVALIDA);
+                return Task.FromResult(new CommandResponse(this));
+            }
+
+    
+            var venda = new Venda(cliente.Id, cliente.Nome, request.DataFaturamento.Date, request.Itens.Count, request.Itens.Sum(item => item.ValorTotal));
 
             request.Itens.ForEach(item =>
             {

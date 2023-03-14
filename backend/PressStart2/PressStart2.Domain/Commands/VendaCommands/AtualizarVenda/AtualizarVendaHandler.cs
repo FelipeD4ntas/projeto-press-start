@@ -48,7 +48,7 @@ namespace PressStart2.Domain.Commands.VendaCommands.AtualizarVenda
                     requestItem.ValorTotal));
             });
 
-            venda.Atualizar(cliente.Id, request.DataFaturamento, request.Itens.Count, request.Itens.Sum(item => item.ValorTotal));
+            venda.Atualizar(cliente.Id, cliente.Nome, request.DataFaturamento.Date, request.Itens.Count, request.Itens.Sum(item => item.ValorTotal));
             AddNotifications(venda);
 
             if (IsInvalid())

@@ -1,7 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AspNetCore.IQueryable.Extensions.Filter;
+using Microsoft.EntityFrameworkCore;
 using PressStart2.Domain.Entities;
 using PressStart2.Domain.Interfaces.Repositories;
 using PressStart2.Infra.Data.Context;
+using System.Collections.Generic;
 
 namespace PressStart2.Infra.Data.Repositories
 {
@@ -23,7 +25,12 @@ namespace PressStart2.Infra.Data.Repositories
 
         public IEnumerable<TEntity> Listar()
         {
-            return _entitySet.AsEnumerable<TEntity>();
+            return _entitySet.AsEnumerable();
+        }
+
+        public IQueryable<TEntity> ListarComFiltro()
+        {
+            return _entitySet.AsQueryable();
         }
 
         public void Adicionar(TEntity entity)

@@ -127,6 +127,25 @@ Na sexta etapa apenas fizemos a integração do Frontend com o Backend, e criamo
 
 https://user-images.githubusercontent.com/85248692/213283601-b377f728-f70b-4577-a08f-917a98eaabf5.mp4
 
+## Sétima etapa
+Na setima etapa foi proposto para implementarmos uma filtro de pesquisa pelo backend, e também uma paginação.
+
+## Telas Sétima etapa
+* ##### Filtro e Paginação da lista de Clientes
+
+![image](/uploads/bd50cb5289f215c13248d5c95d886815/image.png)
+
+* ##### Filtro e Paginação da lista de Vendas
+
+![image](/uploads/c3dc2a64b50c4645f562af92f250bb85/image.png)
+
+* ##### Filtro e Paginação (Responsivo)
+
+![image](/uploads/b86a80ca5721497095f39ee0900314e7/image.png)
+
+## Última etapa
+Na última etapa foi proposto para refatorarmos todo o projeto com o Framework Vuejs.
+
 ## Etapa bônus
 Não tava na ideia do projeto, mas resolvi criar um container docker para subir com mais facilidade o projeto na etapa de desenvolvimento, criando um container para o Frontend, uma para o Backend e um para o Banco de Dados (Por questão de segurança, em ambiente de produção não subam o Banco de Dados no docker.) e juntando todos com o docker compose.
 
@@ -141,7 +160,7 @@ Não tava na ideia do projeto, mas resolvi criar um container docker para subir 
 
 * Com o docker instalado, através do CMD (terminal), navegar até a raiz do projeto (no mesmo local onde se encontra o arquivo docker-compose.yml) e executar o seguinte comando:
 ```
- docker-compose up --build
+ docker-compose up
 ```
 
 * Com o container pronto para uso, acessar o projeto através do link:<br> **http://localhost:3000/**

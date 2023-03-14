@@ -16,9 +16,9 @@ namespace PressStart2.Infra.Data.Repositories
            return _entitySet.Include(venda => venda.Cliente).Include(venda => venda.ItensVenda).Where(venda => venda.Id == id).FirstOrDefault();
         }
 
-        public IEnumerable<Venda> ListarComDependecia()
+        public IQueryable<Venda> ListarComDependecia()
         {
-            return _entitySet.AsNoTracking().Include(venda => venda.Cliente).ToList();
+            return _entitySet.AsQueryable().Include(venda => venda.Cliente);
         }
 
         public bool VerificarVendasCliente(Guid clienteId)

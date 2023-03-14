@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "t2VNytfCJYfuV4O5ayCBA/0qm4auyoyE6WtUv5wuH2Ck8f6DEZC1IfmsYChmVTCVaDeuGzkHmZYiRMWWQdPP4Q==",
+  "dgSpecHash": "xfLtGzguVY3R7rpcyZW7Q/a/phqCgfGueGYWb6yvWeVsMvJx7Wnyd9a6woUQPgvJHU616cDS4Bt+/fQzIfPpDA==",
   "success": true,
   "projectFilePath": "C:\\Users\\felip\\OneDrive\\Área de Trabalho\\Lyncas\\Projetos\\projetoPressStart\\backend\\PressStart2\\PressStart2.Infra.Data\\PressStart2.Infra.Data.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\felip\\.nuget\\packages\\aspnetcore.iqueryable.extensions\\7.0.0\\aspnetcore.iqueryable.extensions.7.0.0.nupkg.sha512",
     "C:\\Users\\felip\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\felip\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\felip\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
@@ -24,7 +25,7 @@
     "C:\\Users\\felip\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\felip\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\2.2.0\\microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
     "C:\\Users\\felip\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
-    "C:\\Users\\felip\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\felip\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\felip\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",
     "C:\\Users\\felip\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.0.1\\microsoft.data.sqlclient.sni.runtime.5.0.1.nupkg.sha512",
     "C:\\Users\\felip\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.0\\microsoft.entityframeworkcore.7.0.0.nupkg.sha512",

@@ -107,6 +107,10 @@ namespace PressStart2.Infra.Data.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("DataVenda");
 
+                    b.Property<string>("NomeCliente")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("QuantidadeItens")
                         .HasColumnType("int")
                         .HasColumnName("QuantidadeItens");

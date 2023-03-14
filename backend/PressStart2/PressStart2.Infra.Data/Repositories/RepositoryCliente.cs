@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Azure.Core;
+using Microsoft.EntityFrameworkCore;
 using PressStart2.Domain.Entities;
 using PressStart2.Domain.Interfaces.Repositories;
 using PressStart2.Infra.Data.Context;
@@ -19,6 +20,16 @@ namespace PressStart2.Infra.Data.Repositories
         public bool CpfJaExistente(string cpf)
         {
             return _context.ClienteDbSet.Any(cliente => cliente.CPF == cpf);
+        }
+
+        public bool NomeTemNumero(string nome)
+        {
+            if (nome.Where(c => char.IsNumber(c)).Count() > 0)
+            {
+                return true;
+            } 
+
+            return false;
         }
     }
 }

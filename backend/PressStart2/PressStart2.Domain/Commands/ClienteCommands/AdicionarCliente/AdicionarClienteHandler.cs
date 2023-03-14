@@ -26,6 +26,12 @@ namespace PressStart2.Domain.Commands.ClienteCommands.AdicionarCliente
                 return Task.FromResult(new CommandResponse(this));
             }
 
+            if (_repositoryCliente.NomeTemNumero(request.Nome))
+            {
+                AddNotification(Notificacoes.CLIENTE_MODULO, Notificacoes.NOME_CLIENTE_COM_NUMEROS);
+                return Task.FromResult(new CommandResponse(this));
+            }
+
             var telefoneFormatado = request.Telefone.FormatarStringParaSomenteNumeros();
             var CPFFormatado = request.CPF.FormatarStringParaSomenteNumeros();
             var emailFormatado = request.Email.ToLower();

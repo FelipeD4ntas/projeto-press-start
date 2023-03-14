@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "r9Nf9+iqRq+Qh26wZwSEKDHxuyN71UK8QnheuFa2Kmx0+x4U6vS5vgEYHh374Ba6t7UPl+6LPzceTWYx6/3wvA==",
+  "dgSpecHash": "mrcT46RJT1wRCUfcLfa49rznU40RO8WpIGaQKLt+NxRyfSyJd/kFDgBM3+RcpeXEwDv8F4kiNqmEdxGk25xZrg==",
   "success": true,
   "projectFilePath": "C:\\Users\\felip\\OneDrive\\Área de Trabalho\\Lyncas\\Projetos\\projetoPressStart\\backend\\PressStart2\\PressStart2\\PressStart2.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\felip\\.nuget\\packages\\aspnetcore.iqueryable.extensions\\7.0.0\\aspnetcore.iqueryable.extensions.7.0.0.nupkg.sha512",
     "C:\\Users\\felip\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\felip\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\felip\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

@@ -6,5 +6,6 @@ namespace PressStart2.Domain.Interfaces.Repositories
     {
         bool CpfJaExistente(string cpf, Guid clienteId);
         bool CpfJaExistente(string cpf);
+        bool NomeTemNumero(string nome);
     }
 }

@@ -103,3 +103,4 @@ C:\Users\felip\OneDrive\Área de Trabalho\Lyncas\Projetos\projetoPressStart\back
 C:\Users\felip\OneDrive\Área de Trabalho\Lyncas\Projetos\projetoPressStart\backend\PressStart2\PressStart2\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\felip\OneDrive\Área de Trabalho\Lyncas\Projetos\projetoPressStart\backend\PressStart2\PressStart2\bin\Debug\net6.0\SecureIdentity.dll
 C:\Users\felip\OneDrive\Área de Trabalho\Lyncas\Projetos\projetoPressStart\backend\PressStart2\PressStart2\bin\Debug\net6.0\LocalStorage.dll
+C:\Users\felip\OneDrive\Área de Trabalho\Lyncas\Projetos\projetoPressStart\backend\PressStart2\PressStart2\bin\Debug\net6.0\AspNetCore.IQueryable.Extensions.dll

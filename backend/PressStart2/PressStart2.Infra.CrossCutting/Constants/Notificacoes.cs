@@ -12,11 +12,13 @@
         public const string CLIENTE_REMOVIDO = "Cliente Removido com Sucesso.";
         public const string CPF_CADASTRADO = "CPF já cadastrado.";
         public const string CLIENTE_POSSUI_VENDAS = "Não é possível deletar cliente enquanto ele possuir alguma venda ativa.";
+        public const string NOME_CLIENTE_COM_NUMEROS = "O nome não pode conter números.";
 
         public const string VENDA_NAO_ENCONTRADA = "Venda não encontrada.";
         public const string VENDA_REGISTRADA = "Venda Registrada com Sucesso.";
         public const string VENDA_ATUALIZADA = "Venda Atualizada com Sucesso.";
         public const string VENDA_REMOVIDA = "Venda Removida com Sucesso.";
+        public const string DATA_FATURAMENTO_INVALIDA = "Data de Faturamento não pode ser menor que a Data de Venda!";
 
         public const string USUARIO_REGISTRADO = "Usuario Registrado com Sucesso.";
         public const string USUARIO_SENHA_NAO_CONFERE = "Senhas não Conferem.";

@@ -48,7 +48,7 @@ namespace PressStart2.Controllers
             return BadRequest(response);
         }
 
-        
+
         [HttpGet("validar-token")]
         public async Task<IActionResult> ValidarToken()
         {

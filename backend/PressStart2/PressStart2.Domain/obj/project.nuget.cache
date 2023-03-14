@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "DmTSQyyS3SvL1EOEXRUrj9o4vChkdEte+HAJqBTuz22P5hEAnWltdSHrG7b469JAMde42/794ivhPGcCm3Dsvw==",
+  "dgSpecHash": "iRN7TBy66COIwTMAZ78Thi/QtSVM7lAGAK4lmRFFqAC97QYuGpkal4Z7psL5R73flc68BEPiGW7bkHjbA6ftyA==",
   "success": true,
   "projectFilePath": "C:\\Users\\felip\\OneDrive\\Área de Trabalho\\Lyncas\\Projetos\\projetoPressStart\\backend\\PressStart2\\PressStart2.Domain\\PressStart2.Domain.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\felip\\.nuget\\packages\\aspnetcore.iqueryable.extensions\\7.0.0\\aspnetcore.iqueryable.extensions.7.0.0.nupkg.sha512",
     "C:\\Users\\felip\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
     "C:\\Users\\felip\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\felip\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
@@ -20,7 +21,7 @@
     "C:\\Users\\felip\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
     "C:\\Users\\felip\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\felip\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\2.2.0\\microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
-    "C:\\Users\\felip\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\felip\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\felip\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\2.2.0\\microsoft.extensions.configuration.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\felip\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.2.0\\microsoft.extensions.dependencyinjection.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\felip\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\2.2.0\\microsoft.extensions.fileproviders.abstractions.2.2.0.nupkg.sha512",

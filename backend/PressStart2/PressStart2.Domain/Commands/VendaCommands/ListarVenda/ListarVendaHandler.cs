@@ -1,4 +1,6 @@
-﻿using MediatR;
+﻿using AspNetCore.IQueryable.Extensions;
+using AspNetCore.IQueryable.Extensions.Filter;
+using MediatR;
 using PressStart2.Domain.DTOs;
 using PressStart2.Domain.Interfaces.Repositories;
 using prmToolkit.NotificationPattern;
@@ -16,10 +18,13 @@ namespace PressStart2.Domain.Commands.VendaCommands.ListarVenda
 
         public Task<CommandResponse> Handle(ListarVendaRequest request, CancellationToken cancellationToken)
         {
-            var vendas = _repositoryVenda.ListarComDependecia().Select(venda =>
-                new ListarVendaResponse(venda.Id, venda.Cliente.Nome, venda.Cliente.Id, venda.QuantidadeItens, venda.DataVenda, venda.DataFaturamento, venda.ValorTotal));
+            var vendas = _repositoryVenda.ListarComDependecia().Apply(request).ToList().Select(venda =>
+                new ListarVendasDTO(venda.Id, venda.Cliente.Nome, venda.Cliente.Id, venda.QuantidadeItens, venda.DataVenda, venda.DataFaturamento, venda.ValorTotal));
 
-            return Task.FromResult(new CommandResponse(vendas, this));
+            var totalVendasFiltradas = _repositoryVenda.ListarComDependecia().Filter(request);
+            var listaVendas = new ListarVendaResponse(totalVendasFiltradas.Count(), vendas.ToList());
+
+            return Task.FromResult(new CommandResponse(listaVendas, this));
         }
     }
 }

@@ -7,7 +7,7 @@ namespace PressStart2.Domain.Entities.Contracts
         public static void AdicionarVendaItemContract(this VendaItem vendaItem)
         {
             new AddNotifications<VendaItem>(vendaItem) 
-                .IfNullOrInvalidLength(vendItem => vendaItem.DescricaoItem, 1, 150)
+                .IfNullOrInvalidLength(vendItem => vendaItem.DescricaoItem, 3, 150)
                 .IfLowerOrEqualsThan(vendItem => vendItem.Quantidade, 0)
                 .IfLowerOrEqualsThan(vendItem => vendItem.PrecoUnitario, new Decimal(0.0))
                 .IfLowerOrEqualsThan(vendItem => vendItem.ValorTotal, new Decimal(0.0));
@@ -16,7 +16,7 @@ namespace PressStart2.Domain.Entities.Contracts
         public static void AtualizarVendaItemContract(this VendaItem vendaItem)
         {
             new AddNotifications<VendaItem>(vendaItem)
-                .IfNullOrInvalidLength(vendItem => vendaItem.DescricaoItem, 1, 150)
+                .IfNullOrInvalidLength(vendItem => vendaItem.DescricaoItem, 3, 150)
                 .IfLowerOrEqualsThan(vendItem => vendItem.Quantidade, 0)
                 .IfLowerOrEqualsThan(vendItem => vendItem.PrecoUnitario, new Decimal(0.0))
                 .IfLowerOrEqualsThan(vendItem => vendItem.ValorTotal, new Decimal(0.0));

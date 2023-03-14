@@ -1,6 +1,7 @@
-﻿using MediatR;
+﻿using AspNetCore.IQueryable.Extensions;
+using AspNetCore.IQueryable.Extensions.Filter;
+using MediatR;
 using PressStart2.Domain.DTOs;
-using PressStart2.Domain.Entities;
 using PressStart2.Domain.Interfaces.Repositories;
 using prmToolkit.NotificationPattern;
 
@@ -17,10 +18,14 @@ namespace PressStart2.Domain.Commands.ClienteCommands.ListarCliente
 
         public Task<CommandResponse> Handle(ListarClienteRequest request, CancellationToken cancellationToken)
         {
-            var clientes = _repositroyCliente.Listar().Select(cliente =>
-                new ListarClienteResponse(cliente.Id, cliente.Nome, cliente.Email, cliente.Telefone, cliente.CPF, cliente.Inativo));
+            var clientes = _repositroyCliente.ListarComFiltro().Apply(request).ToList();
+            var totalClientesFiltrados = _repositroyCliente.ListarComFiltro().Filter(request);
 
-            return Task.FromResult(new CommandResponse(clientes, this));
+            var listaClientes = clientes.Select(cliente => new ListarClienteDTO(cliente.Id, cliente.Nome, cliente.Email, cliente.Telefone, cliente.CPF, cliente.Inativo)).ToList();
+
+            var listaClientesResponse = new ListarClienteResponse(totalClientesFiltrados.Count(), listaClientes);
+
+            return Task.FromResult(new CommandResponse(listaClientesResponse, this));
         }
     }
 }

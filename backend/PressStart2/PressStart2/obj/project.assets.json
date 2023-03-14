@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "AspNetCore.IQueryable.Extensions/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0"
+        },
+        "compile": {
+          "lib/net6.0/AspNetCore.IQueryable.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/AspNetCore.IQueryable.Extensions.dll": {}
+        }
+      },
       "Azure.Core/1.24.0": {
         "type": "package",
         "dependencies": {
@@ -2830,6 +2842,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "AspNetCore.IQueryable.Extensions": "7.0.0",
           "MediatR": "11.0.0",
           "Microsoft.AspNetCore.Authentication": "2.2.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.12",
@@ -2873,6 +2886,20 @@
     }
   },
   "libraries": {
+    "AspNetCore.IQueryable.Extensions/7.0.0": {
+      "sha512": "4dj4IFMjkER3Cz7Q9qnB2BobSQ4booBhy7uA5jnVWIB5fJL2gxO1/7Cdf7h+sFr270xuJdHGtbGR4DioEOlUuQ==",
+      "type": "package",
+      "path": "aspnetcore.iqueryable.extensions/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "aspnetcore.iqueryable.extensions.7.0.0.nupkg.sha512",
+        "aspnetcore.iqueryable.extensions.nuspec",
+        "lib/net6.0/AspNetCore.IQueryable.Extensions.dll",
+        "lib/net7.0/AspNetCore.IQueryable.Extensions.dll",
+        "lib/netstandard2.1/AspNetCore.IQueryable.Extensions.dll"
+      ]
+    },
     "Azure.Core/1.24.0": {
       "sha512": "+/qI1j2oU1S4/nvxb2k/wDsol00iGf1AyJX5g3epV7eOpQEP/2xcgh/cxgKMeFgn3U2fmgSiBnQZdkV+l5y0Uw==",
       "type": "package",
