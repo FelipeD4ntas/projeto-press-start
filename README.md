@@ -133,15 +133,15 @@ Na setima etapa foi proposto para implementarmos uma filtro de pesquisa pelo bac
 ## Telas Sétima etapa
 * ##### Filtro e Paginação da lista de Clientes
 
-![image](/uploads/bd50cb5289f215c13248d5c95d886815/image.png)
+![image](https://user-images.githubusercontent.com/85248692/225049413-e4f8524d-e4dc-46d7-a2bc-4b499f043f5d.png)
 
 * ##### Filtro e Paginação da lista de Vendas
 
-![image](/uploads/c3dc2a64b50c4645f562af92f250bb85/image.png)
+![image](https://user-images.githubusercontent.com/85248692/225049751-2b3763c9-57b5-44a8-88fd-ef92a49fcac4.png)
 
 * ##### Filtro e Paginação (Responsivo)
 
-![image](/uploads/b86a80ca5721497095f39ee0900314e7/image.png)
+![image](https://user-images.githubusercontent.com/85248692/225049983-e17b3b0a-96d8-4d68-bd68-1fd8697390fc.png)
 
 ## Última etapa
 Na última etapa foi proposto para refatorarmos todo o projeto com o Framework Vuejs.
