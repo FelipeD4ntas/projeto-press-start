@@ -13,38 +13,49 @@
         <div v-if="loading" class="box-loading">
           <Loading/>
         </div>
-        <table class="conteudo-principal-box-lista-itens-lista" v-else>
-          <thead>
-            <tr>
-              <th>Cliente</th>
-              <th>Qtd. itens</th>
-              <th>Data da venda</th>
-              <th>Data faturamento</th>
-              <th>Valor total</th>
-              <th>Ações</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="linhas-tabela" v-for="venda in vendas" :key="venda.id">
-              <td class="nome-cliente">{{ venda.nomeCliente }}</td>
-              <td class="qtd-vendas">{{ venda.quantidadeItens }}</td>
-              <td class="data-venda">{{ formatarData(venda.dataVenda) }}</td>
-              <td class="data-faturamento">{{ formatarData(venda.dataFaturamento) }}</td>
-              <td class="valor-total">{{ formatarValorTotal(venda.valorTotal) }}</td>
-              <td class="coluna-btn-deletar-editar">
-                <button class="btn-deletar-itens-lista" type="button" @click="deletar(venda.id)">Deletar</button>
-                <button class="btn-editar-itens-lista" type="button" @click="editar(venda.id)">Editar</button>
-              </td>
-              <td class="icone-detalhes-vendas">
-                <button class="btn-detalhes detalhes-vendas" @click="editar(venda.id)">{{ formatarValorTotal(venda.valorTotal) }}</button>
-                <button class="btn-detalhes icone-lixeixa" @click="deletar(venda.id)">
-                  <img src="@/assets/icones/icone-lixeira.png" alt="icone cliente">
-                </button>
-              </td>
-              
-          </tr>
-          </tbody>
-        </table>
+        <Transition
+          enter-active-class="animate__animated animate__fadeInDown"
+          leave-active-class="animate__animated animate__fadeOutDown"
+          name="list"
+          mode="out-in"
+          v-else>
+          <table class="conteudo-principal-box-lista-itens-lista" :key="contTable">
+            <thead>
+              <tr>
+                <th>Cliente</th>
+                <th>Qtd. itens</th>
+                <th>Data da venda</th>
+                <th>Data faturamento</th>
+                <th>Valor total</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <TransitionGroup
+                name="list"
+                leave-active-class="animate__animated animate__zoomOut">
+                <tr class="linhas-tabela" v-for="venda in vendas" :key="venda.id">
+                  <td class="nome-cliente">{{ venda.nomeCliente }}</td>
+                  <td class="qtd-vendas">{{ venda.quantidadeItens }}</td>
+                  <td class="data-venda">{{ formatarData(venda.dataVenda) }}</td>
+                  <td class="data-faturamento">{{ formatarData(venda.dataFaturamento) }}</td>
+                  <td class="valor-total">{{ formatarValorTotal(venda.valorTotal) }}</td>
+                  <td class="coluna-btn-deletar-editar">
+                    <button class="btn-deletar-itens-lista" type="button" @click="deletar(venda.id)">Deletar</button>
+                    <button class="btn-editar-itens-lista" type="button" @click="editar(venda.id)">Editar</button>
+                  </td>
+                  <td class="icone-detalhes-vendas">
+                    <button class="btn-detalhes detalhes-vendas" @click="editar(venda.id)">{{ formatarValorTotal(venda.valorTotal) }}</button>
+                    <button class="btn-detalhes icone-lixeixa" @click="deletar(venda.id)">
+                      <img src="@/assets/icones/icone-lixeira.png" alt="icone cliente">
+                    </button>
+                  </td>
+                </tr>
+              </TransitionGroup>
+            </tbody>
+          </table>
+        </Transition>
+        
       </div>
     </div>
   </div>
@@ -88,6 +99,7 @@ export default {
       parametrosBusca: '',
       usouFiltro: false,
       limitePorPagina: 5,
+      contTable: 1
     }
   },
   methods: {
@@ -130,6 +142,7 @@ export default {
       this.mostrarPopup = !this.mostrarPopup;
     },
     async mudarPagina(valor) {
+      this.contTable++;
       if (this.parametrosBusca) {
         this.URL = `${this.parametrosBusca.URL}&Offset=${valor.offset}`;
         this.listar();
@@ -147,6 +160,21 @@ export default {
 </script>
 
 <style scoped>
+.animate__animated.animate__fadeInDown {
+  --animate-duration: 0.5s;
+}
+
+.list-enter-active,
+.list-leave-active,
+.list-move {
+  overflow: hidden;
+}
+
+.list-enter-from,
+.list-leave-to {
+  overflow: hidden;
+}
+
 .icone-lixeixa {
   margin-left: 30px;
 }

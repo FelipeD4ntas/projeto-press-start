@@ -256,6 +256,9 @@ export default {
     }
   },
   async created() {
+    const responseClientes = await servicesCliente.listar("Cliente/listar");
+    this.clientes = responseClientes.dados.clientes;
+
     if (this.$route.path == '/venda/adicionar') {
       this.submit = this.adicionarVenda;
       this.tipoFormulario = 'Adicionar venda';
@@ -270,11 +273,9 @@ export default {
 
     if (this.$route.path.includes('/venda/editar')) {
       const response = await servicesVenda.obter(`Venda/obter/${this.id}`);
-      const responseClientes = await servicesCliente.listar("Cliente/listar");
       this.submit = this.editarVenda;
       this.tipoFormulario = 'Editar venda';
       this.menosItens = true;
-      this.clientes = responseClientes.dados.clientes;
       this.venda.dataFaturamento = format(new Date(response.dados.dataFaturamento), 'dd/MM/yyyy');
       response.dados.itens.forEach((item, index) => {
         this.venda.itens[index].descricaoItem = item.descricaoItem
@@ -284,17 +285,20 @@ export default {
     }
   },
   async mounted() {
-   const response = await servicesVenda.obter(`Venda/obter/${this.id}`);
-   response.dados.itens.forEach(() => {
-      this.venda.itens.push(
-        {
-          descricaoItem: '',
-          quantidade: 0,
-          precoUnitario: 'R$ 0,00'
-        }
-      )
-    });
-  }
+    if (this.$route.path.includes('/venda/editar')) {
+      const response = await servicesVenda.obter(`Venda/obter/${this.id}`);
+
+      response.dados.itens.forEach(() => {
+          this.venda.itens.push(
+            {
+              descricaoItem: '',
+              quantidade: 0,
+              precoUnitario: 'R$ 0,00'
+            }
+          )
+      });
+    }
+  } 
 }
 </script>
 

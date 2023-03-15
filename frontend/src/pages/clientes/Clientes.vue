@@ -14,39 +14,50 @@
         <div v-if="loading" class="box-loading">
           <Loading/>
         </div>
-
-        <table class="conteudo-principal-box-lista-itens-lista" v-else>
-          <thead>
-            <tr>
-              <th>Nome</th>
-              <th>E-mail</th>
-              <th>Telefone</th>
-              <th>CPF</th>
-              <th>Ações</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="cliente in clientes" :key="cliente.id" class="linhas-tabela" :class="{'cliente-inativo': cliente.inativo}">
-              <td class="nome-cliente">{{ cliente.nome }}</td>
-              <td class="email-cliente">{{ cliente.email }}</td>
-              <td class="telefone-cliente">{{ mascararItem(cliente.telefone, /^(\d{2})(\d{5})/g, "($1) $2", /(\d{5})(\d{4})$/, "$1-$2") }}</td>
-              <td class="cpf-cliente">{{ mascararItem(cliente.cpf, /^(\d{3})(\d{3})/g, "$1.$2", /(\d{3})(\d{2})$/,".$1-$2") }}</td>
-              <td class="coluna-btn-deletar-editar" v-if="!cliente.inativo">
-                <button class="btn-deletar-itens-lista" type="button" @click="deletar(cliente.id)">Deletar</button>
-                <button class="btn-editar-itens-lista" type="button" @click="editar(cliente.id)">Editar</button>
-              </td>
-              <td class="coluna-cliente-inativo" v-if="cliente.inativo">Cliente Inativo</td>
-              <td class="icone-detalhes-clientes" v-if="!cliente.inativo">
-                <button class="btn-detalhes" @click="editar(cliente.id)">
-                  <img src="@/assets/icones/icone-cliente.png" alt="icone cliente">
-                </button>
-                <button class="btn-detalhes icone-lixeixa" @click="deletar(cliente.id)">
-                  <img src="@/assets/icones/icone-lixeira.png" alt="icone cliente">
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <Transition 
+          enter-active-class="animate__animated animate__fadeInDown"
+          leave-active-class="animate__animated animate__fadeOutDown"
+          name="list"
+          mode="out-in"
+          v-else>
+          <table class="conteudo-principal-box-lista-itens-lista" :key="contTable">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Telefone</th>
+                <th>CPF</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <TransitionGroup
+                name="list"
+                leave-active-class="animate__animated animate__zoomOut">
+                <tr v-for="cliente in clientes" :key="cliente.id" class="linhas-tabela" :class="{'cliente-inativo': cliente.inativo}">
+                  <td class="nome-cliente">{{ cliente.nome }}</td>
+                  <td class="email-cliente">{{ cliente.email }}</td>
+                  <td class="telefone-cliente">{{ mascararItem(cliente.telefone, /^(\d{2})(\d{5})/g, "($1) $2", /(\d{5})(\d{4})$/, "$1-$2") }}</td>
+                  <td class="cpf-cliente">{{ mascararItem(cliente.cpf, /^(\d{3})(\d{3})/g, "$1.$2", /(\d{3})(\d{2})$/,".$1-$2") }}</td>
+                  <td class="coluna-btn-deletar-editar" v-if="!cliente.inativo">
+                    <button class="btn-deletar-itens-lista" type="button" @click="deletar(cliente.id)">Deletar</button>
+                    <button class="btn-editar-itens-lista" type="button" @click="editar(cliente.id)">Editar</button>
+                  </td>
+                  <td class="coluna-cliente-inativo" v-if="cliente.inativo">Cliente Inativo</td>
+                  <td class="icone-detalhes-clientes" v-if="!cliente.inativo">
+                    <button class="btn-detalhes" @click="editar(cliente.id)">
+                      <img src="@/assets/icones/icone-cliente.png" alt="icone cliente">
+                    </button>
+                    <button class="btn-detalhes icone-lixeixa" @click="deletar(cliente.id)">
+                      <img src="@/assets/icones/icone-lixeira.png" alt="icone cliente">
+                    </button>
+                  </td>
+                </tr>
+              </TransitionGroup>
+            </tbody>
+          </table>
+        </Transition>
+        
       </div>      
     </div>
   </div>
@@ -89,6 +100,7 @@ export default {
       parametrosBusca: '',
       usouFiltro: false,
       limitePorPagina: 5,
+      contTable: 1
     }
   },
   methods: {
@@ -138,6 +150,7 @@ export default {
       this.mostrarPopup = !this.mostrarPopup;
     },
     async mudarPagina(valor) {
+      this.contTable ++
       if (this.parametrosBusca) {
         this.URL = `${this.parametrosBusca.URL}&Offset=${valor.offset}`;
         this.listar();
@@ -155,6 +168,21 @@ export default {
 </script>
 
 <style scoped>
+.animate__animated.animate__fadeInDown {
+  --animate-duration: 0.5s;
+}
+
+.list-enter-active,
+.list-leave-active,
+.list-move {
+  overflow: hidden;
+}
+
+.list-enter-from,
+.list-leave-to {
+  overflow: hidden;
+}
+
 .icone-lixeixa {
   margin-left: 30px;
 }

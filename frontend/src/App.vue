@@ -1,7 +1,17 @@
 <template>
   <Menu/>
   <main class="box-principal">
-    <router-view/>
+    <router-view v-slot="{ Component, route }">
+      <transition 
+        :enter-active-class="classeTransitionEntrada"
+        :leave-active-class="classeTransitionSaida"
+        mode="out-in"
+        name="rotas">
+        <div :key="route" class="box-principal">
+          <component :is="Component" />
+        </div>
+      </transition>
+    </router-view>
   </main>
 </template>
 
@@ -12,6 +22,12 @@ export default {
   name: 'App',
   components: {
     Menu
+  },
+  data() {
+    return {
+      classeTransitionEntrada: 'animate__animated animate__backInDown',
+      classeTransitionSaida: 'animate__animated animate__backOutDown',
+    }
   }
 }
 </script>
@@ -52,11 +68,21 @@ export default {
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
 }
 
 body {
   font-size: 1.6rem;
   background: var(--cor-background-secundario);
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
+
+
+
+.rotas-leave-to {
+  overflow: hidden;
 }
 
 .conteudo-principal {
