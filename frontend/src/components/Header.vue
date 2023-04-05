@@ -70,27 +70,32 @@ export default {
   created() {
     const menu = document.querySelector('[data-js="menu"]');
     const usuario = JSON.parse(localStorage.getItem('usuario'));
+
     this.nomeUsuario = usuario.nome
+
     document.body.onresize = () => {
+    
       this.tamanhoTela = document.body.clientWidth;
+
       if (
-        this.tamanhoTela < 650 && this.$route.path == '/cliente/adicionar-cliente' || 
-        this.tamanhoTela < 650 && this.$route.path == '/adicionar-venda' || 
-        this.tamanhoTela < 650 && this.$route.path.includes('/editar-venda') || 
-        this.tamanhoTela < 650 && this.$route.path.includes('/editar-cliente')) {
+        this.tamanhoTela < 650 && this.$route.path == '/cliente/adicionar' || 
+        this.tamanhoTela < 650 && this.$route.path == '/venda/adicionar' || 
+        this.tamanhoTela < 650 && this.$route.path.includes('/venda/editar') || 
+        this.tamanhoTela < 650 && this.$route.path.includes('/cliente/editar')) {
         menu.style.display = 'none'
         this.telaComMenu = false;
       } else {
         menu.style.display = 'grid'
         this.telaComMenu = true;
       }
+      
     }
    
     if (
-      window.innerWidth < 650 && this.$route.path == '/adicionar-cliente' || 
-      window.innerWidth < 650 && this.$route.path == '/adicionar-venda' || 
-      window.innerWidth < 650 && this.$route.path.includes('/editar-venda') ||
-      window.innerWidth < 650 && this.$route.path.includes('/editar-cliente')) {
+      window.innerWidth < 650 && this.$route.path == '/cliente/adicionar' || 
+      window.innerWidth < 650 && this.$route.path == '/venda/adicionar' || 
+      window.innerWidth < 650 && this.$route.path.includes('/venda/editar') ||
+      window.innerWidth < 650 && this.$route.path.includes('/cliente/editar')) {
       menu.style.display = 'none'
       this.telaComMenu = false;
     } else {
@@ -98,11 +103,11 @@ export default {
       this.telaComMenu = true;
     }
 
-    if (this.$route.path == '/adicionar-cliente' || this.$route.path == '/adicionar-venda') {
+    if (this.$route.path == '/cliente/adicionar' || this.$route.path == '/venda/adicionar') {
       this.tituloTelaSemMenu = 'Adicionar'
     }
 
-    if (this.$route.path.includes('/editar-cliente') || this.$route.path.includes('/editar-venda')) {
+    if (this.$route.path.includes('/cliente/editar') || this.$route.path.includes('/venda/editar')) {
       this.tituloTelaSemMenu = 'Editar'
     }
   }

@@ -8715,11 +8715,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\felip\\OneDrive\\Área de Trabalho\\Lyncas\\Projetos\\projetoPressStart\\backend\\PressStart2\\PressStart2\\PressStart2.csproj",
+      "projectUniqueName": "D:\\ESTUDOS\\Repositorio\\projeto-press-start\\backend\\PressStart2\\PressStart2\\PressStart2.csproj",
       "projectName": "PressStart2",
-      "projectPath": "C:\\Users\\felip\\OneDrive\\Área de Trabalho\\Lyncas\\Projetos\\projetoPressStart\\backend\\PressStart2\\PressStart2\\PressStart2.csproj",
+      "projectPath": "D:\\ESTUDOS\\Repositorio\\projeto-press-start\\backend\\PressStart2\\PressStart2\\PressStart2.csproj",
       "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\felip\\OneDrive\\Área de Trabalho\\Lyncas\\Projetos\\projetoPressStart\\backend\\PressStart2\\PressStart2\\obj\\",
+      "outputPath": "D:\\ESTUDOS\\Repositorio\\projeto-press-start\\backend\\PressStart2\\PressStart2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -8739,8 +8739,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\felip\\OneDrive\\Área de Trabalho\\Lyncas\\Projetos\\projetoPressStart\\backend\\PressStart2\\PressStart2.Infra.Data\\PressStart2.Infra.Data.csproj": {
-              "projectPath": "C:\\Users\\felip\\OneDrive\\Área de Trabalho\\Lyncas\\Projetos\\projetoPressStart\\backend\\PressStart2\\PressStart2.Infra.Data\\PressStart2.Infra.Data.csproj"
+            "D:\\ESTUDOS\\Repositorio\\projeto-press-start\\backend\\PressStart2\\PressStart2.Infra.Data\\PressStart2.Infra.Data.csproj": {
+              "projectPath": "D:\\ESTUDOS\\Repositorio\\projeto-press-start\\backend\\PressStart2\\PressStart2.Infra.Data\\PressStart2.Infra.Data.csproj"
             }
           }
         }

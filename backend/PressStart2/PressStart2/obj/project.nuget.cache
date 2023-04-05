@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mrcT46RJT1wRCUfcLfa49rznU40RO8WpIGaQKLt+NxRyfSyJd/kFDgBM3+RcpeXEwDv8F4kiNqmEdxGk25xZrg==",
+  "dgSpecHash": "WTFcGKcVQ3qRq3/m4HWiQOlzEtCvceJmTOltfs34OCRxqgaFCTNwjyC6OtVgBk7HXPfxRXBsDW3teZqwrYpMow==",
   "success": true,
-  "projectFilePath": "C:\\Users\\felip\\OneDrive\\Área de Trabalho\\Lyncas\\Projetos\\projetoPressStart\\backend\\PressStart2\\PressStart2\\PressStart2.csproj",
+  "projectFilePath": "D:\\ESTUDOS\\Repositorio\\projeto-press-start\\backend\\PressStart2\\PressStart2\\PressStart2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\felip\\.nuget\\packages\\aspnetcore.iqueryable.extensions\\7.0.0\\aspnetcore.iqueryable.extensions.7.0.0.nupkg.sha512",
     "C:\\Users\\felip\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",

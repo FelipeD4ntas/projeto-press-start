@@ -1,12 +1,13 @@
 using PressStart2;
 using Microsoft.OpenApi.Models;
-using PressStart2.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
+using PressStart2.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("PressStart2Connection");
 var securityKey = builder.Configuration["SecurityKey"];
 
+builder.Services.AddSignalR();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.ConfigureDbContext(connectionString);
@@ -59,9 +60,11 @@ app.UseCors(options =>
     options
         .AllowAnyOrigin()
         .AllowAnyMethod()
-        .AllowAnyHeader();
+        .AllowAnyHeader()
+        .AllowCredentials().WithOrigins("http://localhost:3000");
 });
 
 app.MigrationInitialisation();
+app.MapHub<GraficoHub>("/grafico-vendas");
 
 app.Run();

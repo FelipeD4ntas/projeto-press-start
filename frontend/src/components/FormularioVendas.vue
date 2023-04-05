@@ -88,6 +88,7 @@ import Popup from './Popup';
 import { servicesVenda } from '@/common/services/vendasServices/servicesVenda';
 import { servicesCliente } from '@/common/services/clienteServices/sevicesCliente';
 import { format } from 'date-fns';
+import Hub from '@/Hub';
 
 export default {
   name: 'AdicionarVendaPage',
@@ -121,7 +122,9 @@ export default {
         prefix: 'R$ ',
         precision: 2,
         masked: false
-      }
+      },
+      hub: new Hub(),
+      valoresTotais: []
     }
   },
   computed: {
@@ -149,6 +152,15 @@ export default {
     }
   },
   methods: {
+    configuracaoSignalR() {
+      this.hub.connection.start()
+        .then(() => {
+          console.log('Conectado');
+          this.hub.connection.on("ReceivedMessage", listaValorTotal => {
+            this.valoresTotais = listaValorTotal;
+          })
+        })
+    },
     async adicionarVenda() {
       const descricoes = document.querySelectorAll('[data-js="descricaoItem"]');
       const valores = document.querySelectorAll('[data-js="precoUnitario"]');
@@ -174,6 +186,11 @@ export default {
       this.mostrarPopup = true;
 
       if (response.sucesso) {
+        this.valoresTotais = await this.popularValoresTotais();
+
+        this.hub.connection.invoke('SendMessage', this.valoresTotais)
+          .catch(e => console.error(e.toString()));
+
         this.notificacao = response.dados.mensagem;
         this.responseOk = true;
         return
@@ -253,6 +270,17 @@ export default {
       if (this.responseOk) {
         this.$router.push('/vendas');
       }
+    },
+    async popularValoresTotais() {
+      const response = await servicesVenda.listar('Venda/listar');
+      let valoresTotaisVendas = Array(12).fill(0);
+
+      Array.from(response.dados.vendas).forEach(venda => {
+        const mes = new Date(venda.dataFaturamento).getMonth()
+        valoresTotaisVendas[mes] += venda.valorTotal;
+      });
+
+      return valoresTotaisVendas;
     }
   },
   async created() {
@@ -260,6 +288,7 @@ export default {
     this.clientes = responseClientes.dados.clientes;
 
     if (this.$route.path == '/venda/adicionar') {
+      this.configuracaoSignalR();
       this.submit = this.adicionarVenda;
       this.tipoFormulario = 'Adicionar venda';
       this.venda.itens.push(

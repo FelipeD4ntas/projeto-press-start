@@ -10,3 +10,15 @@ C:\Users\felip\OneDrive\Área de Trabalho\Lyncas\Projetos\projetoPressStart\back
 C:\Users\felip\OneDrive\Área de Trabalho\Lyncas\Projetos\projetoPressStart\backend\PressStart2\PressStart2.Infra.CrossCutting\obj\Debug\net6.0\refint\PressStart2.Infra.CrossCutting.dll
 C:\Users\felip\OneDrive\Área de Trabalho\Lyncas\Projetos\projetoPressStart\backend\PressStart2\PressStart2.Infra.CrossCutting\obj\Debug\net6.0\PressStart2.Infra.CrossCutting.pdb
 C:\Users\felip\OneDrive\Área de Trabalho\Lyncas\Projetos\projetoPressStart\backend\PressStart2\PressStart2.Infra.CrossCutting\obj\Debug\net6.0\ref\PressStart2.Infra.CrossCutting.dll
+C:\Users\felip\OneDrive\Área de Trabalho\ESTUDOS\Repositorio\projeto-press-start\backend\PressStart2\PressStart2.Infra.CrossCutting\bin\Debug\net6.0\PressStart2.Infra.CrossCutting.deps.json
+C:\Users\felip\OneDrive\Área de Trabalho\ESTUDOS\Repositorio\projeto-press-start\backend\PressStart2\PressStart2.Infra.CrossCutting\bin\Debug\net6.0\PressStart2.Infra.CrossCutting.dll
+C:\Users\felip\OneDrive\Área de Trabalho\ESTUDOS\Repositorio\projeto-press-start\backend\PressStart2\PressStart2.Infra.CrossCutting\bin\Debug\net6.0\PressStart2.Infra.CrossCutting.pdb
+C:\Users\felip\OneDrive\Área de Trabalho\ESTUDOS\Repositorio\projeto-press-start\backend\PressStart2\PressStart2.Infra.CrossCutting\obj\Debug\net6.0\PressStart2.Infra.CrossCutting.csproj.AssemblyReference.cache
+C:\Users\felip\OneDrive\Área de Trabalho\ESTUDOS\Repositorio\projeto-press-start\backend\PressStart2\PressStart2.Infra.CrossCutting\obj\Debug\net6.0\PressStart2.Infra.CrossCutting.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\felip\OneDrive\Área de Trabalho\ESTUDOS\Repositorio\projeto-press-start\backend\PressStart2\PressStart2.Infra.CrossCutting\obj\Debug\net6.0\PressStart2.Infra.CrossCutting.AssemblyInfoInputs.cache
+C:\Users\felip\OneDrive\Área de Trabalho\ESTUDOS\Repositorio\projeto-press-start\backend\PressStart2\PressStart2.Infra.CrossCutting\obj\Debug\net6.0\PressStart2.Infra.CrossCutting.AssemblyInfo.cs
+C:\Users\felip\OneDrive\Área de Trabalho\ESTUDOS\Repositorio\projeto-press-start\backend\PressStart2\PressStart2.Infra.CrossCutting\obj\Debug\net6.0\PressStart2.Infra.CrossCutting.csproj.CoreCompileInputs.cache
+C:\Users\felip\OneDrive\Área de Trabalho\ESTUDOS\Repositorio\projeto-press-start\backend\PressStart2\PressStart2.Infra.CrossCutting\obj\Debug\net6.0\PressStart2.Infra.CrossCutting.dll
+C:\Users\felip\OneDrive\Área de Trabalho\ESTUDOS\Repositorio\projeto-press-start\backend\PressStart2\PressStart2.Infra.CrossCutting\obj\Debug\net6.0\refint\PressStart2.Infra.CrossCutting.dll
+C:\Users\felip\OneDrive\Área de Trabalho\ESTUDOS\Repositorio\projeto-press-start\backend\PressStart2\PressStart2.Infra.CrossCutting\obj\Debug\net6.0\PressStart2.Infra.CrossCutting.pdb
+C:\Users\felip\OneDrive\Área de Trabalho\ESTUDOS\Repositorio\projeto-press-start\backend\PressStart2\PressStart2.Infra.CrossCutting\obj\Debug\net6.0\ref\PressStart2.Infra.CrossCutting.dll

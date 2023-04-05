@@ -22,7 +22,12 @@
 
 <script>
 export default {
-  name: 'MenuComponent'
+  name: 'MenuComponent',
+  data() {
+    return {
+      rotaAtual: ''
+    }
+  }
 }
 </script>
 

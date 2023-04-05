@@ -4,6 +4,7 @@ import ListaClientes from '@/pages/clientes/Clientes';
 import FormularioClientes from '@/components/FormularioClientes';
 import Vendas from '@/pages/vendas/Vendas';
 import FormularioVendas from '@/components/FormularioVendas';
+import GraficoVendas from '@/pages/graficoVendas/GraficoVendas';
 import Login from '@/pages/login/Login';
 import ApiService from "@/common/api/api.service";
 import { servicesUsuario } from '@/common/services/usuarioServices/servicesUsuario';
@@ -56,6 +57,13 @@ const routeInfos = [
     path: '/venda/editar/:id',
     component: FormularioVendas,
     props: true,
+    meta: {
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/grafico-vendas',
+    component: GraficoVendas,
     meta: {
       requiresAuth: true
     }

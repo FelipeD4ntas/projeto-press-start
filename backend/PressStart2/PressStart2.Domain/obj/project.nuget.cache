@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iRN7TBy66COIwTMAZ78Thi/QtSVM7lAGAK4lmRFFqAC97QYuGpkal4Z7psL5R73flc68BEPiGW7bkHjbA6ftyA==",
+  "dgSpecHash": "pty8tbfGBoGQq5ERwrjzzWUWDWy9nXolvsDQ+j0Bg58IZR2HH2oz2O4GKZsaps0UuhLrPeoStk/bO5Su/T61EQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\felip\\OneDrive\\Área de Trabalho\\Lyncas\\Projetos\\projetoPressStart\\backend\\PressStart2\\PressStart2.Domain\\PressStart2.Domain.csproj",
+  "projectFilePath": "D:\\ESTUDOS\\Repositorio\\projeto-press-start\\backend\\PressStart2\\PressStart2.Domain\\PressStart2.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\felip\\.nuget\\packages\\aspnetcore.iqueryable.extensions\\7.0.0\\aspnetcore.iqueryable.extensions.7.0.0.nupkg.sha512",
     "C:\\Users\\felip\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",

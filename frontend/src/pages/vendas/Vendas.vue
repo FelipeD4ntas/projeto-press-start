@@ -8,7 +8,7 @@
   <div class="conteudo-principal">
     <div class="conteudo-principal-vendas">
       <FiltroBuscaVendas :limitePorPagina="limitePorPagina" @obterURL="listar"/>
-      <HeaderListas :nome="nomeLista" :rota="rotaAdicionarVenda"/>
+      <HeaderListas :nome="nomeLista" :rota="rotaAdicionarVenda" :mostrarGrafico="true"/>
       <div class="conteudo-principal-box-lista">
         <div v-if="loading" class="box-loading">
           <Loading/>

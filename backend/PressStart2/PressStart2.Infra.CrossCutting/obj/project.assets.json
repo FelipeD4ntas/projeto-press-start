@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\felip\\OneDrive\\Área de Trabalho\\Lyncas\\Projetos\\projetoPressStart\\backend\\PressStart2\\PressStart2.Infra.CrossCutting\\PressStart2.Infra.CrossCutting.csproj",
+      "projectUniqueName": "D:\\ESTUDOS\\Repositorio\\projeto-press-start\\backend\\PressStart2\\PressStart2.Infra.CrossCutting\\PressStart2.Infra.CrossCutting.csproj",
       "projectName": "PressStart2.Infra.CrossCutting",
-      "projectPath": "C:\\Users\\felip\\OneDrive\\Área de Trabalho\\Lyncas\\Projetos\\projetoPressStart\\backend\\PressStart2\\PressStart2.Infra.CrossCutting\\PressStart2.Infra.CrossCutting.csproj",
+      "projectPath": "D:\\ESTUDOS\\Repositorio\\projeto-press-start\\backend\\PressStart2\\PressStart2.Infra.CrossCutting\\PressStart2.Infra.CrossCutting.csproj",
       "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\felip\\OneDrive\\Área de Trabalho\\Lyncas\\Projetos\\projetoPressStart\\backend\\PressStart2\\PressStart2.Infra.CrossCutting\\obj\\",
+      "outputPath": "D:\\ESTUDOS\\Repositorio\\projeto-press-start\\backend\\PressStart2\\PressStart2.Infra.CrossCutting\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
