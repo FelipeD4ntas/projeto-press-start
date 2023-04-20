@@ -50,8 +50,10 @@ namespace PressStart2
 
         public static void ConfigureMediator(this IServiceCollection services)
         {
-            var assemblyDomain = AppDomain.CurrentDomain.Load("PressStart2.Domain");
-            services.AddMediatR(assemblyDomain);
+            var assembly = AppDomain.CurrentDomain.Load("PressStart2.Domain");
+		    services.AddMediatR(config => config.RegisterServicesFromAssembly(assembly));
+            // var assemblyDomain = AppDomain.CurrentDomain.Load("PressStart2.Domain");
+            // services.AddMediatR(assemblyDomain);
         }
 
         public static void MigrationInitialisation(this WebApplication app)
